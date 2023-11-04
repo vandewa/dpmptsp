@@ -8,7 +8,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon_io/favicon.ico') }}">
 
 
-    <title>Login | Diaspora Wonosobo</title>
+    <title>Login | DPMPTSP Wonosobo</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
