@@ -73,7 +73,7 @@
 
                     @if (is_mobile())
                         <div class="p-4 card shadow-primary-lg p-lg-5 mb-7" data-aos="fade-up"
-                            style="margin-top:0rem;background: rgb(16,199,77);
+                            style="margin-top:0rem!important;background: rgb(16,199,77);
                         background: linear-gradient(45deg, rgba(16,199,77,1) 0%, rgba(16,199,77,1) 58%, rgba(77,255,136,1) 100%);">
                         @else
                             <div class="p-4 card shadow-primary-lg p-lg-5 mb-7" data-aos="fade-up"
@@ -82,7 +82,9 @@
                     @endif
                     `
                     <div class="text-center text-white">
-                        <img src="{{ asset('osslogo.png') }}" width="150" height="150">
+                        <div style="margin-bottom: 3.4rem; margin-top:1rem;">
+                            <img src="{{ asset('osslogo.png') }}" height="50">
+                        </div>
                         <div class="space-y-2 mb-3">
                             <span><b>OSS</b></span> <br>
                             <span style="font-size: 14px;">Urus Izinmu menggunakan OSS</span>
@@ -129,6 +131,7 @@
                 </div>
                 <!-- End Card -->
             </div>
+
             <div class="mt-2 col-lg-3 pt-7 pt-lg-0">
                 <!-- Card -->
                 @if (is_mobile())
