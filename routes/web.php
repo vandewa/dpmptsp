@@ -40,6 +40,7 @@ Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('/news/{id}', [HomeController::class, 'berita'])->name('detail.berita');
 Route::get('/news-list', [HomeController::class, 'listNews'])->name('news.list');
 Route::get('/cari-berita', [HomeController::class, 'cariBerita'])->name('cari.berita');
+Route::get('/page/personil', [HomeController::class, 'pagePersonil']);
 Route::get('/page/lhkasn', [HomeController::class, 'lhkasn']);
 Route::get('/page/perjanjian-kinerja', [HomeController::class, 'perjanjianKinerja']);
 Route::get('/page/calk', [HomeController::class, 'calk']);

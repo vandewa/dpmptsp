@@ -70,181 +70,207 @@
             <div class="row">
                 <div class="mt-2 col-lg-3 pt-7 pt-lg-0">
                     <!-- Card -->
-                    <div class="p-4 card shadow-primary-lg p-lg-5 mb-7" data-aos="fade-up"
-                        style="margin-top: -10rem;!importantbackground: rgb(16,199,77);
+
+                    @if (is_mobile())
+                        <div class="p-4 card shadow-primary-lg p-lg-5 mb-7" data-aos="fade-up"
+                            style="margin-top:0rem;background: rgb(16,199,77);
                         background: linear-gradient(45deg, rgba(16,199,77,1) 0%, rgba(16,199,77,1) 58%, rgba(77,255,136,1) 100%);">
-                        <div class="text-center text-white">
-                            <img src="{{ asset('osslogo.png') }}" width="150" height="150">
-                            <div class="space-y-2 mb-3">
-                                <span><b>OSS</b></span> <br>
-                                <span style="font-size: 14px;">Urus Izinmu menggunakan OSS</span>
-                            </div>
+                        @else
+                            <div class="p-4 card shadow-primary-lg p-lg-5 mb-7" data-aos="fade-up"
+                                style="margin-top: -10rem;!important;background: rgb(16,199,77);
+                        background: linear-gradient(45deg, rgba(16,199,77,1) 0%, rgba(16,199,77,1) 58%, rgba(77,255,136,1) 100%);">
+                    @endif
+                    `
+                    <div class="text-center text-white">
+                        <img src="{{ asset('osslogo.png') }}" width="150" height="150">
+                        <div class="space-y-2 mb-3">
+                            <span><b>OSS</b></span> <br>
+                            <span style="font-size: 14px;">Urus Izinmu menggunakan OSS</span>
                         </div>
-                        <div class="d-flex justify-content-center">
-                            <!-- Item #1 -->
-                            <div class="mr-2 mb-3">
-                                <a href="https://oss.go.id" class="p-1 text-white hvr-underline-from-left" target="blank">
-                                    <span class="text-center">
-                                        <center><i class="fa-solid fa-house fa-xl"></i></center>
-                                        <span style="font-size:11px;">
-                                            Beranda
-                                        </span>
-                                    </span>
-                                </a>
-                            </div>
-
-                            <div class="mr-2 mb-3">
-                                <a href="https://oss.go.id/regulasi" class="p-1 text-white hvr-underline-from-left"
-                                    target="blank">
-                                    <span class="text-center">
-                                        <center><i class="fa-solid fa-receipt fa-xl"></i></center>
-                                        <span style="font-size:11px;">
-                                            Regulasi
-                                        </span>
-                                    </span>
-                                </a>
-                            </div>
-
-                            <div class="mr-2 mb-3">
-                                <a href="https://oss.go.id/panduan" class="p-1 text-white hvr-underline-from-left"
-                                    target="blank">
-                                    <span class="text-center">
-                                        <center><i class="fa-solid fa-book-open fa-xl"></i></center>
-                                        <span style="font-size:11px;">
-                                            Panduan
-                                        </span>
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class=" transition-3d-hover" href="#"></div>
                     </div>
-                    <!-- End Card -->
+                    <div class="d-flex justify-content-center">
+                        <!-- Item #1 -->
+                        <div class="mr-2 mb-3">
+                            <a href="https://oss.go.id" class="p-1 text-white hvr-underline-from-left" target="blank">
+                                <span class="text-center">
+                                    <center><i class="fa-solid fa-house fa-xl"></i></center>
+                                    <span style="font-size:11px;">
+                                        Beranda
+                                    </span>
+                                </span>
+                            </a>
+                        </div>
+
+                        <div class="mr-2 mb-3">
+                            <a href="https://oss.go.id/regulasi" class="p-1 text-white hvr-underline-from-left"
+                                target="blank">
+                                <span class="text-center">
+                                    <center><i class="fa-solid fa-receipt fa-xl"></i></center>
+                                    <span style="font-size:11px;">
+                                        Regulasi
+                                    </span>
+                                </span>
+                            </a>
+                        </div>
+
+                        <div class="mr-2 mb-3">
+                            <a href="https://oss.go.id/panduan" class="p-1 text-white hvr-underline-from-left"
+                                target="blank">
+                                <span class="text-center">
+                                    <center><i class="fa-solid fa-book-open fa-xl"></i></center>
+                                    <span style="font-size:11px;">
+                                        Panduan
+                                    </span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class=" transition-3d-hover" href="#"></div>
                 </div>
-                <div class="mt-2 col-lg-3 pt-7 pt-lg-0">
-                    <!-- Card -->
+                <!-- End Card -->
+            </div>
+            <div class="mt-2 col-lg-3 pt-7 pt-lg-0">
+                <!-- Card -->
+                @if (is_mobile())
                     <div class="p-4 card shadow-primary-lg p-lg-5 mb-7" data-aos="fade-up"
-                        style="margin-top: -10rem;!important;background: rgb(60,83,228);
+                        style="margin-top:0rem;!important;background: rgb(60,83,228);
                         background: linear-gradient(45deg, rgba(60,83,228,1) 0%, rgba(60,83,228,1) 58%, rgba(74,99,255,1) 100%); height:390px;">
-                        <div class="text-center text-white">
-                            <div style="margin-bottom: 4rem; margin-top:3rem;">
-                                <img src="{{ asset('investasi.png') }}" width="150" height="40">
-                            </div>
-                            <div class="space-y-2 mb-3">
-                                <span><b>Investasi</b></span> <br>
-                                <span style="font-size: 14px;">Urus Izinmu menggunakan OSS</span>
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-center gap-3">
-                            <!-- Item #1 -->
-                            <div class="mr-2 mb-3">
-                                <a href="https://aprizob.wonosobokab.go.id" class="p-1 text-white hvr-underline-from-left"
-                                    target="blank">
-                                    <span class="text-center">
-                                        <center><i class="fa-solid fa-house fa-xl"></i></center>
-                                        <span style="font-size:11px;">
-                                            Beranda
-                                        </span>
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class=" transition-3d-hover" href="#"></div>
+                    @else
+                        <div class="p-4 card shadow-primary-lg p-lg-5 mb-7" data-aos="fade-up"
+                            style="margin-top: -10rem;!important;background: rgb(60,83,228);
+                    background: linear-gradient(45deg, rgba(60,83,228,1) 0%, rgba(60,83,228,1) 58%, rgba(74,99,255,1) 100%); height:390px;">
+                @endif
+
+                <div class="text-center text-white">
+                    <div style="margin-bottom: 4rem; margin-top:3rem;">
+                        <img src="{{ asset('investasi.png') }}" width="150" height="40">
                     </div>
-                    <!-- End Card -->
+                    <div class="space-y-2 mb-3">
+                        <span><b>Investasi</b></span> <br>
+                        <span style="font-size: 14px;">Urus Izinmu menggunakan OSS</span>
+                    </div>
                 </div>
-                <div class="mt-2 col-lg-3 pt-7 pt-lg-0">
-                    <!-- Card -->
+                <div class="d-flex justify-content-center gap-3">
+                    <!-- Item #1 -->
+                    <div class="mr-2 mb-3">
+                        <a href="https://aprizob.wonosobokab.go.id" class="p-1 text-white hvr-underline-from-left"
+                            target="blank">
+                            <span class="text-center">
+                                <center><i class="fa-solid fa-house fa-xl"></i></center>
+                                <span style="font-size:11px;">
+                                    Beranda
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class=" transition-3d-hover" href="#"></div>
+            </div>
+            <!-- End Card -->
+        </div>
+        <div class="mt-2 col-lg-3 pt-7 pt-lg-0">
+            <!-- Card -->
+            @if (is_mobile())
+                <div class="p-4 card shadow-primary-lg p-lg-5 mb-7" data-aos="fade-up"
+                    style="margin-top:0rem;!important;background: rgb(228,60,60);
+                        background: linear-gradient(45deg, rgba(228,60,60,1) 0%, rgba(228,60,60,1) 58%, rgba(244,131,131,1) 100%); height:390px;">
+                @else
                     <div class="p-4 card shadow-primary-lg p-lg-5 mb-7" data-aos="fade-up"
                         style="margin-top: -10rem;!important;background: rgb(228,60,60);
-                        background: linear-gradient(45deg, rgba(228,60,60,1) 0%, rgba(228,60,60,1) 58%, rgba(244,131,131,1) 100%); height:390px;">
-                        <div class="text-center text-white">
-                            <div class="mt-5" style="margin-bottom: 3rem;">
-                                <img src="{{ asset('aprizob.png') }}" width="90" height="70">
-                            </div>
-                            <div class="space-y-2 mb-3">
-                                <span><b>Aprizob</b></span> <br>
-                                <span style="font-size: 14px;">Aplikasi Perizinan Online</span>
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-center gap-3">
-                            <!-- Item #1 -->
-                            <div class="mr-2 mb-3">
-                                <a href="https://aprizob.wonosobokab.go.id" class="p-1 text-white hvr-underline-from-left"
-                                    target="blank">
-                                    <span class="text-center">
-                                        <center><i class="fa-solid fa-house fa-xl"></i></center>
-                                        <span style="font-size:11px;">
-                                            Beranda
-                                        </span>
-                                    </span>
-                                </a>
-                            </div>
-                            <div class="mr-2 mb-3">
-                                <a href="https://aprizob.wonosobokab.go.id/persyaratan"
-                                    class="p-1 text-white hvr-underline-from-left" target="blank">
-                                    <span class="text-center">
-                                        <center><i class="fa-solid fa-book fa-xl"></i></center>
-                                        <span style="font-size:11px;">
-                                            Info Persyaratan
-                                        </span>
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
+                            background: linear-gradient(45deg, rgba(228,60,60,1) 0%, rgba(228,60,60,1) 58%, rgba(244,131,131,1) 100%); height:390px;">
+            @endif
 
-                        <div class=" transition-3d-hover" href="#"></div>
-                    </div>
-                    <!-- End Card -->
+            <div class="text-center text-white">
+                <div class="mt-5" style="margin-bottom: 3rem;">
+                    <img src="{{ asset('aprizob.png') }}" width="90" height="70">
                 </div>
-                <div class="mt-2 col-lg-3 pt-7 pt-lg-0">
-                    <!-- Card -->
-                    <div class="p-4 card shadow-primary-lg p-lg-5 mb-7" data-aos="fade-up"
-                        style="margin-top: -10rem;!important;background: rgb(217,176,40);
-                        background: linear-gradient(45deg, rgba(217,176,40,1) 0%, rgba(217,176,40,1) 58%, rgba(247,204,61,1) 100%);">
-                        <div class="text-center text-white">
-                            <div class="mt-5" style="margin-bottom: 3rem;">
-                                <img src="{{ asset('logo.png') }}" width="150" height="60">
-                            </div>
-                            <div class="space-y-2 mb-3">
-                                <span><b>DPMPTSP</b></span> <br>
-                                <span style="font-size: 14px;">Website DPMPTSP Wonosobo</span>
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-center gap-3">
-                            <div class="mr-2 mb-3">
-                                <div class="mr-2 mb-3">
-                                    <a href="{{ url('news-list') }}" class="p-1 text-white hvr-underline-from-left"
-                                        target="blank">
-                                        <span class="text-center">
-                                            <center><i class="fa-solid fa-book-open-reader fa-xl"></i></center>
-                                            <span style="font-size:11px;">
-                                                Berita
-                                            </span>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="mr-2 mb-3">
-                                <div class="mr-2 mb-3">
-                                    <a href="{{ url('news-list') }}" class="p-1 text-white hvr-underline-from-left"
-                                        target="blank">
-                                        <span class="text-center">
-                                            <center><i class="fa-solid fa-magnifying-glass fa-xl"></i></center>
-                                            <span style="font-size:11px;">
-                                                Tracking Perizinan
-                                            </span>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class=" transition-3d-hover" href="#"></div>
-                    </div>
-                    <!-- End Card -->
+                <div class="space-y-2 mb-3">
+                    <span><b>Aprizob</b></span> <br>
+                    <span style="font-size: 14px;">Aplikasi Perizinan Online</span>
                 </div>
             </div>
+            <div class="d-flex justify-content-center gap-3">
+                <!-- Item #1 -->
+                <div class="mr-2 mb-3">
+                    <a href="https://aprizob.wonosobokab.go.id" class="p-1 text-white hvr-underline-from-left"
+                        target="blank">
+                        <span class="text-center">
+                            <center><i class="fa-solid fa-house fa-xl"></i></center>
+                            <span style="font-size:11px;">
+                                Beranda
+                            </span>
+                        </span>
+                    </a>
+                </div>
+                <div class="mr-2 mb-3">
+                    <a href="https://aprizob.wonosobokab.go.id/persyaratan" class="p-1 text-white hvr-underline-from-left"
+                        target="blank">
+                        <span class="text-center">
+                            <center><i class="fa-solid fa-book fa-xl"></i></center>
+                            <span style="font-size:11px;">
+                                Info Persyaratan
+                            </span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+            <div class=" transition-3d-hover" href="#"></div>
+        </div>
+        <!-- End Card -->
+        </div>
+        <div class="mt-2 col-lg-3 pt-7 pt-lg-0">
+            <!-- Card -->
+            @if (is_mobile())
+                <div class="p-4 card shadow-primary-lg p-lg-5 mb-7" data-aos="fade-up"
+                    style="margin-top: 0rem;!important;background: rgb(217,176,40);
+                        background: linear-gradient(45deg, rgba(217,176,40,1) 0%, rgba(217,176,40,1) 58%, rgba(247,204,61,1) 100%);">
+                @else
+                    <div class="p-4 card shadow-primary-lg p-lg-5 mb-7" data-aos="fade-up"
+                        style="margin-top: -10rem;!important;background: rgb(217,176,40);
+                                background: linear-gradient(45deg, rgba(217,176,40,1) 0%, rgba(217,176,40,1) 58%, rgba(247,204,61,1) 100%);">
+            @endif
+            <div class="text-center text-white">
+                <div class="mt-5" style="margin-bottom: 3rem;">
+                    <img src="{{ asset('logo.png') }}" width="150" height="60">
+                </div>
+                <div class="space-y-2 mb-3">
+                    <span><b>DPMPTSP</b></span> <br>
+                    <span style="font-size: 14px;">Website DPMPTSP Wonosobo</span>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center gap-3">
+                <div class="mr-2 mb-3">
+                    <div class="mr-2 mb-3">
+                        <a href="{{ url('news-list') }}" class="p-1 text-white hvr-underline-from-left" target="blank">
+                            <span class="text-center">
+                                <center><i class="fa-solid fa-book-open-reader fa-xl"></i></center>
+                                <span style="font-size:11px;">
+                                    Berita
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="mr-2 mb-3">
+                    <div class="mr-2 mb-3">
+                        <a href="{{ url('news-list') }}" class="p-1 text-white hvr-underline-from-left" target="blank">
+                            <span class="text-center">
+                                <center><i class="fa-solid fa-magnifying-glass fa-xl"></i></center>
+                                <span style="font-size:11px;">
+                                    Tracking Perizinan
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div class=" transition-3d-hover" href="#"></div>
+        </div>
+        <!-- End Card -->
+        </div>
+        </div>
         </div>
         <!-- End Clients Section -->
 

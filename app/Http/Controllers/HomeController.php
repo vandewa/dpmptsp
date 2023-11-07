@@ -4,15 +4,16 @@ namespace App\Http\Controllers;
 
 use App\Models\Menu;
 use App\Models\Berita;
-use App\Models\DaftarInformasiPublik;
-use App\Models\InformasiPublik;
 use App\Models\Pendiri;
 use App\Models\Visitor;
 use App\Models\LinkTerkait;
+use App\Models\Simpeg\Tb01;
 use Illuminate\Http\Request;
 use App\Models\InformasiUmum;
+use App\Models\InformasiPublik;
 use Illuminate\Support\Facades\DB;
 use App\Models\TransparansiAnggaran;
+use App\Models\DaftarInformasiPublik;
 use Yajra\DataTables\Facades\DataTables;
 use hisorange\BrowserDetect\Parser as Browser;
 
@@ -462,6 +463,29 @@ class HomeController extends Controller
 
         return view('dip2', compact('data'));
 
+
+    }
+
+    public function pagePersonil()
+    {
+        $data = Tb01::with(['skpd'])->select('tmlhr', 'photo', 'tb_01.tglhr', 'nip', 'tb_01.kdunit', 'email', 'gdp', 'gdb', 'email_dinas', 'nama', 'tb_01.idskpd', "jabatan.skpd", 'a_golruang.idgolru', DB::Raw("
+        case when jabfung is null and jabfungum is null then jabatan.jab
+           when jabfung is null then jabfungum
+           else  jabfung end as jabatan
+       "), DB::Raw("a_jenjurusan.jenjurusan as pendidikan"), DB::Raw("a_golruang.pangkat as pangkat"), DB::Raw("a_golruang.golru as golru"), DB::Raw("induk.skpd as unor"))
+            ->leftJoin('a_skpd as jabatan', "tb_01.idskpd", "jabatan.idskpd")
+            ->leftJoin('a_jenjurusan', "tb_01.idjenjurusan", "a_jenjurusan.idjenjurusan")
+            ->leftJoin('a_skpd as induk', DB::Raw("substring(tb_01.idskpd,1,2)"), '=', "induk.idskpd")
+            ->leftJoin('a_golruang', "tb_01.idgolrupkt", "a_golruang.idgolru")
+            ->leftJoin('a_jabfungum', "tb_01.idjabfungum", "a_jabfungum.idjabfungum")
+            ->leftJoin('a_jabfung', "tb_01.idjabfung", "a_jabfung.idjabfung")
+            ->where('tb_01.kdunit', 16)
+            ->where('idjenkedudupeg', 1)
+            ->orderBy('a_golruang.idgolru', 'desc')
+            ->get();
+
+
+        return view('personil', compact('data'));
 
     }
 
