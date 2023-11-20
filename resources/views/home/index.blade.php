@@ -257,7 +257,8 @@
                 </div>
                 <div class="mr-2 mb-3">
                     <div class="mr-2 mb-3">
-                        <a href="{{ url('news-list') }}" class="p-1 text-white hvr-underline-from-left" target="blank">
+                        <a href="{{ route('tracking.perizinan') }}" class="p-1 text-white hvr-underline-from-left"
+                            target="blank">
                             <span class="text-center">
                                 <center><i class="fa-solid fa-magnifying-glass fa-xl"></i></center>
                                 <span style="font-size:11px;">

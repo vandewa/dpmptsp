@@ -59,6 +59,9 @@ return [
 
     'asset_url' => env('ASSET_URL'),
 
+    'aprizob_url' => env('APRIZOB_URL', 'https://aprizob.wonosobokab.go.id/api/tracking'),
+
+
     /*
     |--------------------------------------------------------------------------
     | Application Timezone
@@ -126,6 +129,7 @@ return [
     'key' => env('APP_KEY'),
 
     'cipher' => 'AES-256-CBC',
+
 
     /*
     |--------------------------------------------------------------------------

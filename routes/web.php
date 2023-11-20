@@ -39,6 +39,7 @@ use App\Http\Controllers\TransparansiAnggaran\RkaController;
 Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('/news/{id}', [HomeController::class, 'berita'])->name('detail.berita');
 Route::get('/news-list', [HomeController::class, 'listNews'])->name('news.list');
+Route::get('/tracking-perizinan', [HomeController::class, 'trackingPerizinan'])->name('tracking.perizinan');
 Route::get('/cari-berita', [HomeController::class, 'cariBerita'])->name('cari.berita');
 Route::get('/page/personil', [HomeController::class, 'pagePersonil']);
 Route::get('/page/lhkasn', [HomeController::class, 'lhkasn']);

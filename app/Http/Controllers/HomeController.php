@@ -13,6 +13,7 @@ use App\Models\InformasiUmum;
 use App\Models\InformasiPublik;
 use Illuminate\Support\Facades\DB;
 use App\Models\TransparansiAnggaran;
+use Illuminate\Support\Facades\Http;
 use App\Models\DaftarInformasiPublik;
 use Yajra\DataTables\Facades\DataTables;
 use hisorange\BrowserDetect\Parser as Browser;
@@ -106,6 +107,27 @@ class HomeController extends Controller
             ->simplePaginate(8);
 
         return view('list-berita', compact('data'));
+    }
+
+    public function trackingPerizinan(Request $request)
+    {
+
+        $data = '';
+        $meta = '';
+        $kode = '';
+
+        if ($request->filled('q')) {
+            $kode = $request->q;
+            $response = Http::withoutVerifying()->post(config('app.aprizob_url'), [
+                'kode_transaksi' => $request->q
+            ]);
+            $response = $response->collect();
+            $data = $response['data'];
+            $meta = $response['meta'];
+        }
+
+
+        return view('tracking-perizinan', compact('data', 'meta', 'kode'));
     }
 
     public function halaman($id)
