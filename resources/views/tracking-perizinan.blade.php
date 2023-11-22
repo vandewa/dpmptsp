@@ -1,6 +1,6 @@
-@section('title', 'Berita | DPMPTSP Wonosobo')
+@section('title', 'Tracking Perizinan | DPMPTSP Wonosobo')
 @section('meta-description')
-    <meta content="Berita" name="description" />
+    <meta content="Tracking Perizinan" name="description" />
 @endsection
 @extends('layouts.front.app')
 @section('content')
@@ -36,23 +36,27 @@
                             <div class="mb-3">
                                 <span>Kode Transaksi : <b>{{ $kode }}</b></span>
                             </div>
-                            @foreach ($data as $item)
-                                @if ($item['status'] == 'Selesai')
-                                    <span class="badge bg-success" style="color:white; font-size:2em;">{{ $item['status'] }}
-                                    </span>
-                                @elseif($item['status'] == 'Ditolak')
-                                    <span class="badge bg-danger" style="color:white; font-size:2em;">{{ $item['status'] }}
-                                    </span>
-                                @elseif($item['status'] == 'Diproses')
-                                    <span class="badge bg-warning text-dark" style="font-size:2em;">Tahap Penilaian
-                                        Teknis
-                                    </span>
-                                @elseif($item['status'] == 'Menunggu')
-                                    <span class="badge bg-info text-light" style="font-size:2em;">Tahap Penilaian
-                                        Teknis
-                                    </span>
-                                @endif
-                            @endforeach
+                            @if ($data == 'Tahap Pengajuan')
+                                <span class="badge bg-secondary text-light" style="font-size:2em;">Tahap Pengajuan
+                                </span>
+                            @elseif ($data == 'Tahap Pengecekan')
+                                <span class="badge bg-dark" style="font-size:2em;">Tahap Pengecekan
+                                    Teknis
+                                </span>
+                            @elseif ($data == 'Tahap Penilaian Teknis')
+                                <span class="badge bg-info text-light" style="font-size:2em;">Tahap Penilaian
+                                    Teknis
+                                </span>
+                            @elseif ($data == 'Proses Penandatanganan')
+                                <span class="badge bg-dark text-light" style="font-size:2em;">Proses Penandatanganan
+                                </span>
+                            @elseif ($data == 'Selesai')
+                                <span class="badge bg-success" style="color:white; font-size:2em;">Selesai
+                                </span>
+                            @elseif ($data == 'Ditolak')
+                                <span class="badge bg-danger" style="color:white; font-size:2em;">Ditolak
+                                </span>
+                            @endif
                         @else
                             <span>Kode Transaksi : <b>{{ $kode }}</b></span><br>
                             <b><span class="text-danger">{{ $meta['message'] }} </span></b>

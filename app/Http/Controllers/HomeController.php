@@ -122,7 +122,7 @@ class HomeController extends Controller
                 'kode_transaksi' => $request->q
             ]);
             $response = $response->collect();
-            $data = $response['data'];
+            $data = $response['data']['status'];
             $meta = $response['meta'];
         }
 
