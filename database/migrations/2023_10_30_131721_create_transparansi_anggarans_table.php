@@ -16,6 +16,7 @@ return new class extends Migration {
             $table->string('jenis_informasi_publik_tp')->default('JENIS_INFORMASI_PUBLIK_TP_01');
             $table->bigInteger('tahun')->nullable();
             $table->longText('deskripsi')->nullable();
+            $table->string('link')->nullable();
             $table->timestamps();
         });
     }
