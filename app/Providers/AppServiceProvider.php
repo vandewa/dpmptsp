@@ -23,7 +23,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        $visitor = DB::table('visitors')->count();
+     if (env('APP_ENV') !== 'local') {
+            $visitor = DB::table('visitors')->count();
         View::share('visitor', $visitor);
 
         $pembaca = DB::table('views')->count();
@@ -42,6 +43,9 @@ class AppServiceProvider extends ServiceProvider
 
         $info = InformasiUmum::where('id', 1)->first();
         View::share('info', $info);
+        }
+        
+       
 
     }
 }
