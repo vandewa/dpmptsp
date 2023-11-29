@@ -25,7 +25,7 @@ class InformasiUmumSeeder extends Seeder
                 'twitter' => '',
                 'yt' => '',
                 'ig' => 'https://www.instagram.com/dpmptsp_wonosobo/',
-                'maps' => '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.957395193814!2d109.89797057500063!3d-7.358672792650373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7aa0f85fde3dd1%3A0x55011d556218bc3a!2sDPMPTSP%20Kabupaten%20Wonosobo!5e0!3m2!1sid!2sid!4v1699073352731!5m2!1sid!2sid" width="300" height="100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>',
+                'maps' => '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d594.4226720219427!2d109.89958210567436!3d-7.375511742391522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7aa1417817c51f%3A0x46ca451d31469b29!2sMPP%20Kab.%20Wonosobo!5e1!3m2!1sid!2sid!4v1701248167390!5m2!1sid!2sid" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>',
             ],
         ];
 
