@@ -23,8 +23,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        // if (env('APP_ENV') !== 'local') {
-        // $this->app['request']->server->set('HTTPS', true);
+         if (env('APP_ENV') !== 'local') {
+             if (env('APP_DEBUG') != 'true') {
+        $this->app['request']->server->set('HTTPS', true);
+             }
         $visitor = DB::table('visitors')->count();
         View::share('visitor', $visitor);
 
@@ -44,7 +46,7 @@ class AppServiceProvider extends ServiceProvider
 
         $info = InformasiUmum::where('id', 1)->first();
         View::share('info', $info);
-        // }
+         }
 
 
 
