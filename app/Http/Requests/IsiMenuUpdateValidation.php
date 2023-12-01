@@ -25,7 +25,7 @@ class IsiMenuUpdateValidation extends FormRequest
     {
         return [
             'jenis_st' => 'required',
-            'informasi_st' => 'required'
+            // 'informasi_st' => 'required'
         ];
     }
 }

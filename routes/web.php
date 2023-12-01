@@ -85,7 +85,6 @@ Route::middleware([
     Route::get('/isi-menu', [MenuController::class, 'indexIsiMenu'])->name('isi.menu.index');
     Route::get('/isi-menu/{id}', [MenuController::class, 'editIsiMenu'])->name('isi.menu.edit');
     Route::put('/isi-menu/{id}', [MenuController::class, 'updateIsiMenu'])->name('isi.menu.update');
-    Route::put('/isi-menu/{id}', [MenuController::class, 'updateIsiMenu'])->name('isi.menu.update');
     Route::resource('berita', BeritaController::class);
     Route::resource('file_image', FileController::class);
     Route::resource('link-terkait', LinkTerkaitController::class);

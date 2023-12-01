@@ -23,30 +23,31 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-         if (env('APP_ENV') !== 'local') {
-             if (env('APP_DEBUG') != 'true') {
-        $this->app['request']->server->set('HTTPS', true);
-             }
-        $visitor = DB::table('visitors')->count();
-        View::share('visitor', $visitor);
+        if (env('APP_ENV') !== 'local') {
+            if (env('APP_DEBUG') != 'true') {
+                $this->app['request']->server->set('HTTPS', true);
+            }
 
-        $pembaca = DB::table('views')->count();
-        View::share('pembaca', $pembaca);
+            $visitor = DB::table('visitors')->count();
+            View::share('visitor', $visitor);
 
-        $links = DB::table('link_terkaits')->get();
-        View::share('links', $links);
+            $pembaca = DB::table('views')->count();
+            View::share('pembaca', $pembaca);
 
-        $menus = Menu::with(['childs'])
-            ->where('parent_id', '!=', null)
-            ->where('parent_id', 1)
-            ->orderBy('urutan', 'asc')
-            ->get();
+            $links = DB::table('link_terkaits')->get();
+            View::share('links', $links);
 
-        View::share('menus', $menus);
+            $menus = Menu::with(['childs'])
+                ->where('parent_id', '!=', null)
+                ->where('parent_id', 1)
+                ->orderBy('urutan', 'asc')
+                ->get();
 
-        $info = InformasiUmum::where('id', 1)->first();
-        View::share('info', $info);
-         }
+            View::share('menus', $menus);
+
+            $info = InformasiUmum::where('id', 1)->first();
+            View::share('info', $info);
+        }
 
 
 
