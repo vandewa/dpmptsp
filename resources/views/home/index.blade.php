@@ -156,7 +156,7 @@
                 <div class="d-flex justify-content-center gap-3">
                     <!-- Item #1 -->
                     <div class="mr-2 mb-3">
-                        <a href="https://aprizob.wonosobokab.go.id" class="p-1 text-white hvr-underline-from-left"
+                        <a href="https://investasidev.wonosobokab.go.id" class="p-1 text-white hvr-underline-from-left"
                             target="blank">
                             <span class="text-center">
                                 <center><i class="fa-solid fa-house fa-xl"></i></center>
