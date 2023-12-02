@@ -50,7 +50,7 @@
         </div>
         <div class="form-group">
             <label>Link</label>
-            {{ Form::text('link', null, ['class' => 'form-control ', 'placeholder' => 'https://google.com']) }}
+            {{ Form::text('link', null, ['class' => 'form-control ', 'placeholder' => 'public/dokumen/20231202092717.pdf']) }}
         </div>
         <div class="form-group">
             <div class="card-footer">

@@ -25,7 +25,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="row">
-                            <div class="col-md-4">
+                            <div class="col-md-4 mt-3">
                                 {{-- <div class="bg-transparent padding40 text-dark box-rounded"> --}}
                                 <h3>Hubungi Kami</h3>
                                 <ul class="nav nav-sm nav-x-0 nav-black flex-column">
@@ -64,7 +64,7 @@
                                 {!! $info->maps ?? '' !!}
                             </div>
 
-                            <div class="col-md-4">
+                            <div class="col-md-4 mt-3">
                                 <div class="bg-transparent padding40 text-dark box-rounded">
                                     <h3 class="mb-3">Pengaduan Masyarakat</h3>
                                     <a href="https://laporbupati.wonosobokab.go.id" target="_blank">
@@ -105,7 +105,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-4">
+                            <div class="col-md-4 mt-3">
                                 <div class="bg-transparent padding40 text-dark box-rounded">
                                     <div class="mb-1">
                                         <h3>Link Terkait</h3>

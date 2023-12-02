@@ -27,21 +27,24 @@
                 </div>
 
                 <div class="space-bottom-2">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <img src="{{ asset('pelayanan.png') }}" alt="" height="300">
-                        </div>
-                        <div class="col-md-6">
-                            @foreach ($pelayanan as $index => $list)
-                                <a href="{{ route('pelayanan', $list->id) }}">
-                                    <span class="kecil">
-                                        {{ $index + 1 . '. ' . $list->judul ?? '' }}
-                                    </span>
-                                </a>
-                                <br>
-                            @endforeach
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12">
+                                <img src="{{ asset('pelayanan.png') }}" alt="" style="width: 90%;">
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                @foreach ($pelayanan as $index => $list)
+                                    <a href="{{ route('pelayanan', $list->id) }}">
+                                        <span class="kecil">
+                                            {{ $index + 1 . '. ' . $list->judul ?? '' }}
+                                        </span>
+                                    </a>
+                                    <br>
+                                @endforeach
+                            </div>
                         </div>
                     </div>
+
                 </div>
 
 

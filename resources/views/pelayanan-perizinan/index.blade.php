@@ -78,7 +78,6 @@
                 {
                     data: 'created_at',
                     name: 'created_at',
-                    orderable: false,
                     searchable: false,
                     className: "text-left",
                     visible: false

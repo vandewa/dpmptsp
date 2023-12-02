@@ -9,7 +9,7 @@
                     <div class="col-md-12 mt-3">
                         <div class="d-flex justify-content-end">
                             @if (Request::segment(1) == 'lhkasn')
-                                <a href="{{ route('lkhasn.create') }}" type="button" class="btn btn-md btn-primary">
+                                <a href="{{ route('lhkasn.create') }}" type="button" class="btn btn-md btn-primary">
                                 @elseif(Request::segment(1) == 'perjanjian-kinerja')
                                     <a href="{{ route('perjanjian-kinerja.create') }}" type="button"
                                         class="btn btn-md btn-primary">

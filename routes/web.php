@@ -42,7 +42,7 @@ Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('/news/{id}', [HomeController::class, 'berita'])->name('detail.berita');
 Route::get('/pelayanan/{id}', [HomeController::class, 'pelayanan'])->name('pelayanan');
 Route::get('/news-list', [HomeController::class, 'listNews'])->name('news.list');
-Route::get('/tracking-perizinan', [HomeController::class, 'trackingPerizinan'])->name('tracking.perizinan');
+Route::get('/page/tracking-perizinan', [HomeController::class, 'trackingPerizinan'])->name('tracking.perizinan');
 Route::get('/cari-berita', [HomeController::class, 'cariBerita'])->name('cari.berita');
 Route::get('/berita-lainnya', [HomeController::class, 'beritaLainnya'])->name('berita.lainnya');
 Route::get('/page/personil', [HomeController::class, 'pagePersonil']);
