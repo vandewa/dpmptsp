@@ -78,14 +78,24 @@
                                         <div class="col-md-12">
                                             <div class="d-flex justify-content-start">
                                                 <div class="mr-3">
-                                                    <a href="">
+                                                    <a href="{{ $info->ig ?? '#' }}" target="_blank">
                                                         <img src="{{ asset('ig.png') }}" height="60"
                                                             class="card-img transition-zoom-hover">
                                                     </a>
                                                 </div>
+                                                <div class="mr-3">
+                                                    <a href="{{ $info->yt ?? '#' }}" target="_blank">
+                                                        <img src="{{ asset('yt.png') }}" height="60"
+                                                            class="card-img transition-zoom-hover">
+                                                    </a>
+
+                                                </div>
                                                 <div>
-                                                    <img src="{{ asset('yt.png') }}" height="60"
-                                                        class="card-img transition-zoom-hover">
+                                                    <a href="{{ $info->wa ?? '#' }}" target="_blank">
+                                                        <img src="{{ asset('wa.png') }}" height="60"
+                                                            class="card-img transition-zoom-hover">
+                                                    </a>
+
                                                 </div>
                                             </div>
                                         </div>
