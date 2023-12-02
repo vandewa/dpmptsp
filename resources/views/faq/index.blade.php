@@ -8,7 +8,7 @@
                 <div class="row">
                     <div class="col-md-12 mt-3">
                         <div class="d-flex justify-content-end">
-                            <a href="{{ route('dip.create') }}" type="button" class="btn btn-md btn-primary"> <i
+                            <a href="{{ route('faq.create') }}" type="button" class="btn btn-md btn-primary"> <i
                                     class="nav-icon fas fa-plus-square mr-3"></i>Add Data</a>
                         </div>
                     </div>
@@ -23,8 +23,9 @@
                                         <thead>
                                             <tr>
                                                 <th>No</th>
-                                                <th>Tahun</th>
+                                                <th>Pertanyaan</th>
                                                 <th>Aksi</th>
+                                                <th style="display: none"></th>
                                             </tr>
                                         </thead>
                                     </table>
@@ -39,18 +40,11 @@
 
 @push('js')
     <script type="text/javascript">
-        $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            }
-        });
         var table = $('#devan').DataTable({
             processing: true,
             serverSide: true,
-            dom: 'lrt',
-            // responsive: true,
             "order": [
-                [1, "desc"]
+                [3, "desc"]
             ],
             ajax: window.location.href,
             columns: [{
@@ -61,18 +55,20 @@
                     className: "text-left"
                 },
                 {
-                    data: 'tahun',
-                    name: 'tahun',
-                    className: "text-left"
+                    data: 'pertanyaan',
+                    name: 'pertanyaan'
                 },
                 {
                     data: 'action',
                     name: 'action',
                     orderable: false,
-                    searchable: false,
-                    className: "text-center"
+                    searchable: false
                 },
-
+                {
+                    data: 'created_at',
+                    name: 'created_at',
+                    visible: false
+                },
             ]
         });
     </script>

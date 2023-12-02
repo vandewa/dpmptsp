@@ -8,8 +8,48 @@
                 <div class="row">
                     <div class="col-md-12 mt-3">
                         <div class="d-flex justify-content-end">
-                            <a href="{{ route('lhkasn.create') }}" type="button" class="btn btn-md btn-primary"> <i
-                                    class="nav-icon fas fa-plus-square mr-3"></i>Add Data</a>
+                            @if (Request::segment(1) == 'lhkasn')
+                                <a href="{{ route('lkhasn.create') }}" type="button" class="btn btn-md btn-primary">
+                                @elseif(Request::segment(1) == 'perjanjian-kinerja')
+                                    <a href="{{ route('perjanjian-kinerja.create') }}" type="button"
+                                        class="btn btn-md btn-primary">
+                                    @elseif(Request::segment(1) == 'calk')
+                                        <a href="{{ route('calk.create') }}" type="button" class="btn btn-md btn-primary">
+                                        @elseif(Request::segment(1) == 'laporan-aset')
+                                            <a href="{{ route('laporan-aset.create') }}" type="button"
+                                                class="btn btn-md btn-primary">
+                                            @elseif(Request::segment(1) == 'renja')
+                                                <a href="{{ route('renja.create') }}" type="button"
+                                                    class="btn btn-md btn-primary">
+                                                @elseif(Request::segment(1) == 'renstra')
+                                                    <a href="{{ route('renstra.create') }}" type="button"
+                                                        class="btn btn-md btn-primary">
+                                                    @elseif(Request::segment(1) == 'pobl')
+                                                        <a href="{{ route('pobl.create') }}" type="button"
+                                                            class="btn btn-md btn-primary">
+                                                        @elseif(Request::segment(1) == 'program-kegiatan')
+                                                            <a href="{{ route('program-kegiatan.create') }}" type="button"
+                                                                class="btn btn-md btn-primary">
+                                                            @elseif(Request::segment(1) == 'realisasi-anggaran')
+                                                                <a href="{{ route('realisasi-anggaran.create') }}"
+                                                                    type="button" class="btn btn-md btn-primary">
+                                                                @elseif(Request::segment(1) == 'lkjip')
+                                                                    <a href="{{ route('lkjip.create') }}" type="button"
+                                                                        class="btn btn-md btn-primary">
+                                                                    @elseif(Request::segment(1) == 'dpa')
+                                                                        <a href="{{ route('dpa.create') }}" type="button"
+                                                                            class="btn btn-md btn-primary">
+                                                                        @elseif(Request::segment(1) == 'rka')
+                                                                            <a href="{{ route('rka.create') }}"
+                                                                                type="button"
+                                                                                class="btn btn-md btn-primary">
+                                                                            @elseif(Request::segment(1) == 'neraca')
+                                                                                <a href="{{ route('neraca.create') }}"
+                                                                                    type="button"
+                                                                                    class="btn btn-md btn-primary">
+                            @endif
+
+                            <i class="nav-icon fas fa-plus-square mr-3"></i>Add Data</a>
                         </div>
                     </div>
 

@@ -7,6 +7,7 @@ use App\Models\Menu;
 use Yajra\DataTables\Facades\DataTables;
 use App\Http\Requests\IsiMenuUpdateValidation;
 use App\Http\Requests\MenuStoreValidation;
+use App\Http\Requests\MenuUpdateValidation;
 use Illuminate\Support\Str;
 
 
@@ -127,7 +128,7 @@ class MenuController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(MenuStoreValidation $request, $id)
+    public function update(MenuUpdateValidation $request, $id)
     {
         $menu = Menu::findOrFail($id);
         $nama_menu = $menu->nama;

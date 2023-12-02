@@ -7,8 +7,8 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
-                        {{ Form::model($data, ['route' => ['dip.update', $data->id], 'method' => 'put', 'files' => true]) }}
-                        @include('daftar-informasi-publik.form')
+                        {{ Form::model($data, ['route' => ['pelayanan-perizinan.update', $data->id], 'method' => 'put', 'files' => true]) }}
+                        @include('pelayanan-perizinan.form')
                         {{ Form::close() }}
                     </div>
                 </div>

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AttachmentController;
+use App\Http\Controllers\FaqController;
 use App\Http\Controllers\TransparansiAnggaran\LhkasnController;
 use App\Http\Controllers\TransparansiAnggaran\RenjaController;
 use App\Http\Controllers\TransparansiAnggaran\RenstraController;
@@ -14,6 +15,7 @@ use App\Http\Controllers\DaftarInformasiPublikController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LinkTerkaitController;
 use App\Http\Controllers\InformasiUmumController;
+use App\Http\Controllers\PelayananPerizinanController;
 use App\Http\Controllers\TransparansiAnggaran\CalkController;
 use App\Http\Controllers\TransparansiAnggaran\DpaController;
 use App\Http\Controllers\TransparansiAnggaran\LaporanAsetController;
@@ -38,9 +40,11 @@ use App\Http\Controllers\TransparansiAnggaran\RkaController;
 
 Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('/news/{id}', [HomeController::class, 'berita'])->name('detail.berita');
+Route::get('/pelayanan/{id}', [HomeController::class, 'pelayanan'])->name('pelayanan');
 Route::get('/news-list', [HomeController::class, 'listNews'])->name('news.list');
 Route::get('/tracking-perizinan', [HomeController::class, 'trackingPerizinan'])->name('tracking.perizinan');
 Route::get('/cari-berita', [HomeController::class, 'cariBerita'])->name('cari.berita');
+Route::get('/berita-lainnya', [HomeController::class, 'beritaLainnya'])->name('berita.lainnya');
 Route::get('/page/personil', [HomeController::class, 'pagePersonil']);
 Route::get('/page/lhkasn', [HomeController::class, 'lhkasn']);
 Route::get('/page/perjanjian-kinerja', [HomeController::class, 'perjanjianKinerja']);
@@ -103,7 +107,8 @@ Route::middleware([
     Route::resource('dpa', DpaController::class);
     Route::resource('rka', RkaController::class);
     Route::resource('neraca', NeracaController::class);
-    Route::resource('daftar-informasi-publik', DaftarInformasiPublikController::class);
-
+    Route::resource('dip', DaftarInformasiPublikController::class);
+    Route::resource('faq', FaqController::class);
+    Route::resource('pelayanan-perizinan', PelayananPerizinanController::class);
 
 });

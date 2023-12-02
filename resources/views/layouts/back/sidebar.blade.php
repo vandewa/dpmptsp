@@ -45,41 +45,45 @@
 
                   <li
                       class="nav-item 
-                  {{ Request::segment(1) == 'isi-menu' ? ' menu-open' : '' }}
-                  {{ Request::segment(1) == 'menu' ? ' menu-open' : '' }}
-                  {{ Request::segment(1) == 'lhkasn' ? ' menu-open' : '' }}
-                  {{ Request::segment(1) == 'perjanjian-kinerja' ? ' menu-open' : '' }}
-                  {{ Request::segment(1) == 'calk' ? ' menu-open' : '' }}
-                  {{ Request::segment(1) == 'laporan-aset' ? ' menu-open' : '' }}
-                  {{ Request::segment(1) == 'renja' ? ' menu-open' : '' }}
-                  {{ Request::segment(1) == 'renstra' ? ' menu-open' : '' }}
-                  {{ Request::segment(1) == 'pobl' ? ' menu-open' : '' }}
-                  {{ Request::segment(1) == 'program-kegiatan' ? ' menu-open' : '' }}
-                  {{ Request::segment(1) == 'realisasi-anggaran' ? ' menu-open' : '' }}
-                  {{ Request::segment(1) == 'lkjip' ? ' menu-open' : '' }}
-                  {{ Request::segment(1) == 'dpa' ? ' menu-open' : '' }}
-                  {{ Request::segment(1) == 'rka' ? ' menu-open' : '' }}
-                  {{ Request::segment(1) == 'neraca' ? ' menu-open' : '' }}
-                  {{ Request::segment(1) == 'daftar-informasi-publik' ? ' menu-open' : '' }}
+                        {{ Request::segment(1) == 'isi-menu' ? ' menu-open' : '' }}
+                        {{ Request::segment(1) == 'menu' ? ' menu-open' : '' }}
+                        {{ Request::segment(1) == 'lhkasn' ? ' menu-open' : '' }}
+                        {{ Request::segment(1) == 'perjanjian-kinerja' ? ' menu-open' : '' }}
+                        {{ Request::segment(1) == 'calk' ? ' menu-open' : '' }}
+                        {{ Request::segment(1) == 'laporan-aset' ? ' menu-open' : '' }}
+                        {{ Request::segment(1) == 'renja' ? ' menu-open' : '' }}
+                        {{ Request::segment(1) == 'renstra' ? ' menu-open' : '' }}
+                        {{ Request::segment(1) == 'pobl' ? ' menu-open' : '' }}
+                        {{ Request::segment(1) == 'program-kegiatan' ? ' menu-open' : '' }}
+                        {{ Request::segment(1) == 'realisasi-anggaran' ? ' menu-open' : '' }}
+                        {{ Request::segment(1) == 'lkjip' ? ' menu-open' : '' }}
+                        {{ Request::segment(1) == 'dpa' ? ' menu-open' : '' }}
+                        {{ Request::segment(1) == 'rka' ? ' menu-open' : '' }}
+                        {{ Request::segment(1) == 'neraca' ? ' menu-open' : '' }}
+                        {{ Request::segment(1) == 'dip' ? ' menu-open' : '' }}
+                        {{ Request::segment(1) == 'faq' ? ' menu-open' : '' }}
+                        {{ Request::segment(1) == 'pelayanan-perizinan' ? ' menu-open' : '' }}
                   ">
                       <a href="#"
                           class="nav-link
-                  {{ Request::segment(1) == 'isi-menu' ? ' active' : '' }}
-                  {{ Request::segment(1) == 'menu' ? ' active' : '' }}
-                  {{ Request::segment(1) == 'lhkasn' ? ' active' : '' }}
-                  {{ Request::segment(1) == 'perjanjian-kinerja' ? ' active' : '' }}
-                  {{ Request::segment(1) == 'calk' ? ' active' : '' }}
-                  {{ Request::segment(1) == 'laporan-aset' ? ' active' : '' }}
-                  {{ Request::segment(1) == 'renja' ? ' active' : '' }}
-                  {{ Request::segment(1) == 'renstra' ? ' active' : '' }}
-                  {{ Request::segment(1) == 'pobl' ? ' active' : '' }}
-                  {{ Request::segment(1) == 'program-kegiatan' ? ' active' : '' }}
-                  {{ Request::segment(1) == 'realisasi-anggaran' ? ' active' : '' }}
-                  {{ Request::segment(1) == 'lkjip' ? ' active' : '' }}
-                  {{ Request::segment(1) == 'dpa' ? ' active' : '' }}
-                  {{ Request::segment(1) == 'rka' ? ' active' : '' }}
-                  {{ Request::segment(1) == 'neraca' ? ' active' : '' }}
-                  {{ Request::segment(1) == 'daftar-informasi-publik' ? 'active' : '' }}
+                            {{ Request::segment(1) == 'isi-menu' ? ' active' : '' }}
+                            {{ Request::segment(1) == 'menu' ? ' active' : '' }}
+                            {{ Request::segment(1) == 'lhkasn' ? ' active' : '' }}
+                            {{ Request::segment(1) == 'perjanjian-kinerja' ? ' active' : '' }}
+                            {{ Request::segment(1) == 'calk' ? ' active' : '' }}
+                            {{ Request::segment(1) == 'laporan-aset' ? ' active' : '' }}
+                            {{ Request::segment(1) == 'renja' ? ' active' : '' }}
+                            {{ Request::segment(1) == 'renstra' ? ' active' : '' }}
+                            {{ Request::segment(1) == 'pobl' ? ' active' : '' }}
+                            {{ Request::segment(1) == 'program-kegiatan' ? ' active' : '' }}
+                            {{ Request::segment(1) == 'realisasi-anggaran' ? ' active' : '' }}
+                            {{ Request::segment(1) == 'lkjip' ? ' active' : '' }}
+                            {{ Request::segment(1) == 'dpa' ? ' active' : '' }}
+                            {{ Request::segment(1) == 'rka' ? ' active' : '' }}
+                            {{ Request::segment(1) == 'neraca' ? ' active' : '' }}
+                            {{ Request::segment(1) == 'dip' ? 'active' : '' }}
+                            {{ Request::segment(1) == 'faq' ? 'active' : '' }}
+                            {{ Request::segment(1) == 'pelayanan-perizinan' ? 'active' : '' }}
 
                       ">
                           <i class="nav-icon fas fa-list"></i>
@@ -125,7 +129,6 @@
                           {{ Request::segment(1) == 'lkjip' ? ' menu-open' : '' }}
                           {{ Request::segment(1) == 'dpa' ? ' menu-open' : '' }}
                           {{ Request::segment(1) == 'rka' ? ' menu-open' : '' }}
-                          {{ Request::segment(1) == 'neraca' ? ' menu-open' : '' }}
                           {{ Request::segment(1) == 'neraca' ? ' menu-open' : '' }}
                           ">
                               <a href="#"
@@ -301,14 +304,36 @@
                               </ul>
                           </li>
                           <li class="nav-item">
-                              <a href="{{ route('daftar-informasi-publik.index') }}"
-                                  class="nav-link {{ Request::segment(1) == 'daftar-informasi-publik' ? 'active' : '' }}">
-                                  @if (Request::segment(1) == 'daftar-informasi-publik')
+                              <a href="{{ route('dip.index') }}"
+                                  class="nav-link {{ Request::segment(1) == 'dip' ? 'active' : '' }}">
+                                  @if (Request::segment(1) == 'dip')
                                       <i class="far fa-dot-circle nav-icon ml-3"></i>
                                   @else
                                       <i class="far fa-circle nav-icon ml-3"></i>
                                   @endif
                                   <p>Daftar Informasi Publik</p>
+                              </a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="{{ route('pelayanan-perizinan.index') }}"
+                                  class="nav-link {{ Request::segment(1) == 'pelayanan-perizinan' ? 'active' : '' }}">
+                                  @if (Request::segment(1) == 'pelayanan-perizinan')
+                                      <i class="far fa-dot-circle nav-icon ml-3"></i>
+                                  @else
+                                      <i class="far fa-circle nav-icon ml-3"></i>
+                                  @endif
+                                  <p>Pelayanan Perizinan</p>
+                              </a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="{{ route('faq.index') }}"
+                                  class="nav-link {{ Request::segment(1) == 'faq' ? 'active' : '' }}">
+                                  @if (Request::segment(1) == 'faq')
+                                      <i class="far fa-dot-circle nav-icon ml-3"></i>
+                                  @else
+                                      <i class="far fa-circle nav-icon ml-3"></i>
+                                  @endif
+                                  <p>FAQ</p>
                               </a>
                           </li>
                       </ul>

@@ -5,7 +5,91 @@
 @extends('layouts.front.app')
 @section('content')
     <main id="content" role="main">
-        <div class="container space-top-3 space-top-lg-3 space-bottom-2">
+        <!-- Hero Section -->
+        <div class="bg-img-hero"
+            style="background-image: url({{ asset('front/assets/svg/components/abstract-shapes-12.svg') }});">
+            <div class="container space-top-3 space-top-lg-4 space-bottom-2 position-relative z-index-2">
+                <div class="w-md-80 w-lg-60 text-center mx-md-auto">
+                    <h1>KEPUASAN ANDA PRIORITAS KAMI</h1>
+                    <p>DPMPTSP Kabupaten Wonosobo</p>
+                </div>
+            </div>
+        </div>
+        <!-- End Hero Section -->
+        <div class="container space-top-1 space-top-lg-1 space-bottom-2">
+            <!-- FAQ Topics Section -->
+            <div class="container space-2 space-bottom-lg-1">
+                <div class="d-flex justify-content-center ">
+                    <img src="{{ asset('pelayanan.gif') }}" style="height: 150px;">
+                </div>
+                <div class="d-flex justify-content-center space-bottom-lg-1">
+                    <img src="{{ asset('katen/images/wave.svg') }}" class="wave" alt="wave" />
+                </div>
+
+                <div class="space-bottom-2">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="{{ asset('pelayanan.png') }}" alt="" height="300">
+                        </div>
+                        <div class="col-md-6">
+                            @foreach ($pelayanan as $index => $list)
+                                <a href="{{ route('pelayanan', $list->id) }}">
+                                    <span class="kecil">
+                                        {{ $index + 1 . '. ' . $list->judul ?? '' }}
+                                    </span>
+                                </a>
+                                <br>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row justify-content-lg-center">
+                    <div class="col-lg-8">
+                        <div id="basics" class="space-bottom-1">
+                            <div class="d-flex justify-content-center ">
+                                <img src="{{ asset('FAQ.gif') }}" style="height: 90px;">
+                            </div>
+                            <div class="d-flex justify-content-center space-bottom-lg-1">
+                                <img src="{{ asset('katen/images/wave.svg') }}" class="wave" alt="wave" />
+                            </div>
+
+                            <!-- Basics Accordion -->
+                            <div id="basicsAccordion">
+                                @foreach ($faq as $list)
+                                    <!-- Card -->
+                                    <div class="card shadow-none mb-3">
+                                        <div class="card-header card-collapse" id="basicsHeadingOne">
+                                            <a class="btn btn-link btn-block d-flex justify-content-between card-btn collapsed bg-white px-0"
+                                                href="javascript:;" role="button" data-toggle="collapse"
+                                                data-target="#basics{{ $list->id }}" aria-expanded="false"
+                                                aria-controls="basics{{ $list->id }}">
+                                                {{ $list->pertanyaan ?? '' }}
+
+                                                <span class="card-btn-toggle">
+                                                    <span class="card-btn-toggle-default">&plus;</span>
+                                                    <span class="card-btn-toggle-active">&minus;</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div id="basics{{ $list->id }}" class="collapse"
+                                            aria-labelledby="basicsHeadingOne" data-parent="#basicsAccordion">
+                                            <div class="card-body px-0">
+                                                {!! $list->jawaban !!}
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Card -->
+                                @endforeach
+                            </div>
+                            <!-- End Basics Accordion -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
             <div class="space-bottom-1">
                 <div class="d-flex justify-content-center">
@@ -69,10 +153,11 @@
                                 <div class="card-footer border-0 pt-0">
                                     <div class="media align-items-center">
                                         <div class="avatar-group">
-                                            <a class="avatar avatar-xs avatar-circle" href="#" data-toggle="tooltip"
-                                                data-placement="top" title=""
+                                            <a class="avatar avatar-xs avatar-circle" href="#"
+                                                data-toggle="tooltip" data-placement="top" title=""
                                                 data-original-title=" {{ $item->dibuat->name ?? '' }}">
-                                                <img class="avatar-img" src="{{ asset('favicon_io/apple-touch-icon.png') }}"
+                                                <img class="avatar-img"
+                                                    src="{{ asset('favicon_io/apple-touch-icon.png') }}"
                                                     alt="Image Description">
                                             </a>
                                         </div>
@@ -89,9 +174,19 @@
             </div>
         </div>
 
-        <div class="d-flex justify-content-center mt-3">
-            {{ $data->links('vendor.pagination.simple-default') }}
+        <div class="container mt-3 mb-2 text-right">
+            <a class="btn btn-primary btn-sm" href="{{ route('berita.lainnya') }}">Lihat Selengkapnya <i
+                    class="ml-1 fas fa-angle-right fa-sm"></i></a>
         </div>
 
     </main>
 @endsection
+
+@push('css')
+    <style>
+        .kecil {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    </style>
+@endpush

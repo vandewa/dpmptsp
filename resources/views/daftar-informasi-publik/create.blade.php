@@ -7,7 +7,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
-                        {{ Form::open(['route' => ['daftar-informasi-publik.store'], 'files' => true]) }}
+                        {{ Form::open(['route' => ['dip.store'], 'files' => true]) }}
                         @include('daftar-informasi-publik.form')
                         {{ Form::close() }}
                     </div>

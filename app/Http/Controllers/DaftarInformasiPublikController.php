@@ -23,8 +23,8 @@ class DaftarInformasiPublikController extends Controller
                 ->addColumn('action', function ($data) {
                     return
                         '<div class="list-icons">
-                        <a href="' . route('daftar-informasi-publik.edit', $data->id) . '" class="btn btn-outline-primary rounded-round"><i class="far fa-plus-square mr-2"></i>Edit</a>
-                        <a href="' . route('daftar-informasi-publik.destroy', $data->id) . '" class="btn btn-outline-danger rounded-round delete-data-table"><i class="fas fa-trash mr-2"></i>Hapus</a>
+                        <a href="' . route('dip.edit', $data->id) . '" class="btn btn-outline-primary rounded-round"><i class="far fa-plus-square mr-2"></i>Edit</a>
+                        <a href="' . route('dip.destroy', $data->id) . '" class="btn btn-outline-danger rounded-round delete-data-table"><i class="fas fa-trash mr-2"></i>Hapus</a>
                     </div>';
                 })
                 ->rawColumns(['action', 'tombol'])
@@ -39,7 +39,7 @@ class DaftarInformasiPublikController extends Controller
      */
     public function create()
     {
-        return view('daftar-informasi-publik');
+        return view('daftar-informasi-publik.create');
     }
 
     /**
@@ -52,7 +52,7 @@ class DaftarInformasiPublikController extends Controller
             'deskripsi' => $request->deskripsi,
         ]);
 
-        return redirect()->route('daftar-informasi-publik.index')->with('store', 'oke');
+        return redirect()->route('dip.index')->with('store', 'oke');
 
     }
 
@@ -84,7 +84,7 @@ class DaftarInformasiPublikController extends Controller
             'deskripsi' => $request->deskripsi,
         ]);
 
-        return redirect()->route('daftar-informasi-publik.index')->with('edit', 'oke');
+        return redirect()->route('dip.index')->with('edit', 'oke');
     }
 
     /**

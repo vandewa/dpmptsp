@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Faq;
 use App\Models\Menu;
 use App\Models\Berita;
+use App\Models\PelayananPerizinan;
 use App\Models\Pendiri;
 use App\Models\Visitor;
 use App\Models\LinkTerkait;
@@ -84,6 +86,16 @@ class HomeController extends Controller
 
     }
 
+    public function beritaLainnya()
+    {
+        $posting = Berita::with(['sampul', 'dibuat'])
+            ->orderBy('created_at', 'desc')
+            ->simplePaginate(8);
+
+        return view('berita-lainnya', compact('posting'));
+
+    }
+
     public function berita($id)
     {
         $data = Berita::with(['sampul', 'dibuat'])->where('slug', $id)->first();
@@ -98,15 +110,26 @@ class HomeController extends Controller
 
         return view('detail-berita', compact('data', 'berita_terkait'));
     }
+    public function pelayanan($id)
+    {
+        $data = PelayananPerizinan::where('id', $id)->first();
+
+        return view('halaman-pelayanan', compact('data'));
+    }
 
     public function listNews()
     {
         $data = Berita::with(['sampul', 'dibuat'])
             ->where('publish_st', 1)
             ->orderBy('created_at', 'desc')
-            ->simplePaginate(8);
+            ->limit(4)
+            ->get();
 
-        return view('list-berita', compact('data'));
+        $faq = Faq::get();
+
+        $pelayanan = PelayananPerizinan::get();
+
+        return view('list-berita', compact('data', 'faq', 'pelayanan'));
     }
 
     public function trackingPerizinan(Request $request)

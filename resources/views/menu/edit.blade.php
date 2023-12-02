@@ -19,7 +19,7 @@
 @endsection
 
 @push('js')
-    {!! JsValidator::formRequest('App\Http\Requests\MenuStoreValidation') !!}
+    {!! JsValidator::formRequest('App\Http\Requests\MenuUpdateValidation') !!}
 
     <script type="text/javascript">
         var uploadedDocumentMap = {};

@@ -31,9 +31,9 @@
                             <div class="courses-one__single-content">
                                 <h6
                                     style=" font-size: 14px;
-                            line-height: 24px;
-                            font-weight: 400;
-                            color:red;">
+                                    line-height: 24px;
+                                    font-weight: 400;
+                                    color:red;">
                                     <b>{{ $data->dibuat->name ?? '' }}<span> |
                                             {{ \Carbon\Carbon::createFromTimeStamp(strtotime($data->created_at))->isoFormat('dddd, D MMMM Y') }}</span></b>
                                     <ul class="list-unstyled news-one__meta">

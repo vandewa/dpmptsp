@@ -188,7 +188,7 @@
                     <!-- Nav -->
                     <nav class="js-mega-menu navbar navbar-expand-lg">
                         <!-- Logo -->
-                        <a class="navbar-brand" href="{{ route('index') }}">
+                        <a class="navbar-brand" href="{{ route('news.list') }}">
                             <img src="{{ asset('logo.png') }}" alt="Logo">
                         </a>
                         <!-- End Logo -->
@@ -222,7 +222,7 @@
                                     <li class="hs-has-sub-menu navbar-nav-item">
 
                                         <a id="pagesMegaMenu" class="hs-mega-menu-invoker nav-link"
-                                            href="{{ route('index') }}" aria-haspopup="true" aria-expanded="false"
+                                            href="{{ route('news.list') }}" aria-haspopup="true" aria-expanded="false"
                                             aria-labelledby="pagesSubMenu">Beranda</a>
                                         <!-- Pages - Submenu -->
                                         <div class="hs-sub-menu ">
@@ -259,14 +259,66 @@
                                                                     style="min-width: 230px;">
 
                                                                     @foreach ($child1->childs as $child2)
-                                                                        @if ($child2->jenis_st == 'JENIS_MENU_ST_01')
+                                                                        <div class="hs-has-sub-menu">
+                                                                            @if ($child2->jenis_st == 'JENIS_MENU_ST_01')
+                                                                                <a id="navLinkPagesAccount"
+                                                                                    class="hs-mega-menu-invoker dropdown-item
+                                                                                @if (count($child2->childs)) dropdown-item-toggle @endif"
+                                                                                    href="{{ $child2->preview_image }}"
+                                                                                    target="_blank">{{ $child2->nama }}
+                                                                                </a>
+                                                                            @else
+                                                                                @if (count($child2->childs))
+                                                                                    <a id="navLinkPagesAccount"
+                                                                                        class="hs-mega-menu-invoker dropdown-item
+                                                                                            @if (count($child2->childs)) dropdown-item-toggle @endif"
+                                                                                        href="javascript:;"
+                                                                                        aria-expanded="false"
+                                                                                        aria-haspopup="true">{{ $child2->nama }}
+                                                                                    </a>
+                                                                                @else
+                                                                                    <a id="navLinkPagesAccount"
+                                                                                        class="hs-mega-menu-invoker dropdown-item
+                                                                                            @if (count($child2->childs)) dropdown-item-toggle @endif"
+                                                                                        href="{{ url('page/' . $child2->slug) }}">{{ $child2->nama }}
+                                                                                    </a>
+                                                                                @endif
+                                                                            @endif
+
+                                                                            <div id="navSubmenuPagesAccount"
+                                                                                class="hs-sub-menu  @if (count($child2->childs)) dropdown-menu @endif"
+                                                                                aria-labelledby="navLinkPagesAccount">
+
+                                                                                @foreach ($child2->childs as $child3)
+                                                                                    @if ($child3->jenis_st == 'JENIS_MENU_ST_01')
+                                                                                        <a id="navLinkPagesAccounts"
+                                                                                            class="hs-mega-menu-invoker dropdown-item
+                                                                                        @if (count($child3->childs)) dropdown-item-toggle @endif"
+                                                                                            href="{{ $child3->preview_image }}"
+                                                                                            aria-haspopup="true"
+                                                                                            aria-expanded="false"
+                                                                                            aria-controls="navSubmenuPagesAccount"
+                                                                                            target="_blank">{{ $child3->nama ?? '' }}
+                                                                                        </a>
+                                                                                    @else
+                                                                                        <a id="navLinkPagesAccounts"
+                                                                                            class="hs-mega-menu-invoker dropdown-item
+                                                                                        @if (count($child3->childs)) dropdown-item-toggle @endif"
+                                                                                            href="{{ url('page/' . $child3->slug) }}">{{ $child3->nama ?? '' }}
+                                                                                        </a>
+                                                                                    @endif
+                                                                                @endforeach
+
+                                                                            </div>
+                                                                        </div>
+                                                                        {{-- @if ($child2->jenis_st == 'JENIS_MENU_ST_01')
                                                                             <a class="dropdown-item "
                                                                                 href="{{ $child2->preview_image }}"
                                                                                 target="_blank">{{ $child2->nama ?? '' }}</a>
                                                                         @else
                                                                             <a class="dropdown-item "
                                                                                 href="{{ url('page/' . $child2->slug) }}">{{ $child2->nama ?? '' }}</a>
-                                                                        @endif
+                                                                        @endif --}}
                                                                     @endforeach
                                                                 </div>
                                                             </div>

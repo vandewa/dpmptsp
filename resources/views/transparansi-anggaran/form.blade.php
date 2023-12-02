@@ -5,7 +5,7 @@
             <input type="hidden" value="TRANSPARANSI_ANGGARAN_TP_01" name="transparansi_anggaran_tp">
         @elseif(Request::segment(1) == 'perjanjian-kinerja')
             <h3 class="card-title">PERJANJIAN KINERJA</h3>
-            <input type="hidden" value="TRANSPARANSI_ANGGARAN_TP_03" name="transparansi_anggaran_tp">
+            <input type="hidden" value="TRANSPARANSI_ANGGARAN_TP_02" name="transparansi_anggaran_tp">
         @elseif(Request::segment(1) == 'calk')
             <h3 class="card-title">CaLK</h3>
             <input type="hidden" value="TRANSPARANSI_ANGGARAN_TP_03" name="transparansi_anggaran_tp">

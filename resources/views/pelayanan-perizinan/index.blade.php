@@ -8,8 +8,8 @@
                 <div class="row">
                     <div class="col-md-12 mt-3">
                         <div class="d-flex justify-content-end">
-                            <a href="{{ route('dip.create') }}" type="button" class="btn btn-md btn-primary"> <i
-                                    class="nav-icon fas fa-plus-square mr-3"></i>Add Data</a>
+                            <a href="{{ route('pelayanan-perizinan.create') }}" type="button" class="btn btn-md btn-primary">
+                                <i class="nav-icon fas fa-plus-square mr-3"></i>Add Data</a>
                         </div>
                     </div>
 
@@ -23,8 +23,9 @@
                                         <thead>
                                             <tr>
                                                 <th>No</th>
-                                                <th>Tahun</th>
+                                                <th>Judul</th>
                                                 <th>Aksi</th>
+                                                <th style="display: none"></th>
                                             </tr>
                                         </thead>
                                     </table>
@@ -50,7 +51,7 @@
             dom: 'lrt',
             // responsive: true,
             "order": [
-                [1, "desc"]
+                [3, "desc"]
             ],
             ajax: window.location.href,
             columns: [{
@@ -61,8 +62,10 @@
                     className: "text-left"
                 },
                 {
-                    data: 'tahun',
-                    name: 'tahun',
+                    data: 'judul',
+                    name: 'judul',
+                    orderable: false,
+                    searchable: false,
                     className: "text-left"
                 },
                 {
@@ -72,7 +75,14 @@
                     searchable: false,
                     className: "text-center"
                 },
-
+                {
+                    data: 'created_at',
+                    name: 'created_at',
+                    orderable: false,
+                    searchable: false,
+                    className: "text-left",
+                    visible: false
+                },
             ]
         });
     </script>
