@@ -33,6 +33,12 @@
                                     </div>
                                     {{ Form::text('ig', null, ['class' => 'form-control ', 'placeholder' => 'https://instagram.com']) }}
                                 </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">WhatsApp</span>
+                                    </div>
+                                    {{ Form::text('wa', null, ['class' => 'form-control ', 'placeholder' => 'https://wa.me/6281111111']) }}
+                                </div>
                                 {{-- <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">Twitter</span>
