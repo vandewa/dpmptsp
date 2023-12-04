@@ -26,7 +26,7 @@ class MenuController extends Controller
             return DataTables::of($data)
                 ->addIndexColumn()
                 ->addColumn('action', function ($row) {
-                    if ($row->id <= 94) {
+                    if ($row->id <= 41) {
                         $actionBtn =
                             '<div>
                             <a href="' . route('menu.edit', $row->id) . '" class="btn btn-info px-3 radius-30"><i class="bx bx-edit-alt mr-1"></i>Edit</a>
