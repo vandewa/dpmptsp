@@ -6,16 +6,16 @@
         <section class="content">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-12 mt-3">
+                    <div class="mt-3 col-md-12">
                         <div class="d-flex justify-content-end">
                             <a href="{{ route('pelayanan-perizinan.create') }}" type="button" class="btn btn-md btn-primary">
-                                <i class="nav-icon fas fa-plus-square mr-3"></i>Add Data</a>
+                                <i class="mr-3 nav-icon fas fa-plus-square"></i>Add Data</a>
                         </div>
                     </div>
 
                     <div class="col-md-12">
                         <!-- Content area -->
-                        <div class="card mt-3">
+                        <div class="mt-3 card">
                             <!-- /.card-header -->
                             <div class="card-body">
                                 <div class="table-responsive">
@@ -48,7 +48,7 @@
         var table = $('#devan').DataTable({
             processing: true,
             serverSide: true,
-            dom: 'lrt',
+            // dom: 'lrt',
             // responsive: true,
             "order": [
                 [3, "desc"]

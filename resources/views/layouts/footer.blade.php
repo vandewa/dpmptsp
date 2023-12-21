@@ -25,14 +25,14 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="row">
-                            <div class="col-md-4 mt-3">
+                            <div class="mt-3 col-md-4">
                                 {{-- <div class="bg-transparent padding40 text-dark box-rounded"> --}}
                                 <h3>Hubungi Kami</h3>
                                 <ul class="nav nav-sm nav-x-0 nav-black flex-column">
                                     <li class="nav-item">
                                         <a class="nav-link media" href="javascript:;">
                                             <span class="media">
-                                                <span class="fas fa-building mr-2" style="margin-top:10px;"></span>
+                                                <span class="mr-2 fas fa-building" style="margin-top:10px;"></span>
                                                 <span class="media-body">
                                                     {{ $info->alamat ?? '' }}
                                                 </span>
@@ -42,7 +42,7 @@
                                     <li class="nav-item">
                                         <a class="nav-link media" href="tel:{{ $info->telepon ?? '' }}">
                                             <span class="media">
-                                                <span class="fas fa-phone mr-2" style="margin-top:10px;"></span>
+                                                <span class="mr-2 fas fa-phone" style="margin-top:10px;"></span>
                                                 <span class="media-body">
                                                     {{ $info->telepon ?? '' }}
                                                 </span>
@@ -52,7 +52,7 @@
                                     <li class="nav-item">
                                         <a class="nav-link media" href="mailto:{{ $info->email ?? '' }}">
                                             <span class="media">
-                                                <span class="fas fa-envelope mr-2" style="margin-top:10px;"></span>
+                                                <span class="mr-2 fas fa-envelope" style="margin-top:10px;"></span>
                                                 <span class="media-body">
                                                     {{ $info->email ?? '' }}
                                                 </span>
@@ -64,14 +64,14 @@
                                 {!! $info->maps ?? '' !!}
                             </div>
 
-                            <div class="col-md-4 mt-3">
+                            <div class="mt-3 col-md-4">
                                 <div class="bg-transparent padding40 text-dark box-rounded">
                                     <h3 class="mb-3">Pengaduan Masyarakat</h3>
                                     <a href="https://laporbupati.wonosobokab.go.id" target="_blank">
                                         <img class="mx-auto card-img transition-zoom-hover"
                                             src="{{ asset('laporv.gif') }}" style="width:300px;">
                                     </a>
-                                    <div class="mb-3 mt-3">
+                                    <div class="mt-3 mb-3">
                                         <h3>Sosial Media</h3>
                                     </div>
                                     <div class="row">
@@ -105,7 +105,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-4 mt-3">
+                            <div class="mt-3 col-md-4">
                                 <div class="bg-transparent padding40 text-dark box-rounded">
                                     <div class="mb-1">
                                         <h3>Link Terkait</h3>
@@ -137,8 +137,8 @@
     <!-- Social Networks -->
     <div class="container space-1">
         <div class="row justify-content-end">
-            <div class="col-md-5 text-right aos-init aos-animate" data-aos="fade-left">
-                <p id="copyright" class="small text-dark mb-0">© DPMPTSP
+            <div class="text-right col-md-5 aos-init aos-animate" data-aos="fade-left">
+                <p id="copyright" class="mb-0 small text-dark">© DPMPTSP
                     Kabupaten
                     Wonosobo.</p>
             </div>
@@ -147,7 +147,7 @@
     <!-- End Social Networks -->
 
     <!-- SVG Shape -->
-    <figure class="ie-wave-7-bottom w-80 w-md-65 w-lg-50 position-absolute bottom-0 left-0 z-index-n1">
+    <figure class="bottom-0 left-0 ie-wave-7-bottom w-80 w-md-65 w-lg-50 position-absolute z-index-n1">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             viewBox="0 0 589.5 112.7" style="enable-background:new 0 0 589.5 112.7;" xml:space="preserve"
             class="injected-svg js-svg-injector" data-parent="#SVGwave7BottomShape"
@@ -169,7 +169,7 @@
             </path>
         </svg>
     </figure>
-    <figure class="ie-wave-7-bottom w-80 w-md-65 w-lg-50 position-absolute bottom-0 left-0 z-index-n1">
+    <figure class="bottom-0 left-0 ie-wave-7-bottom w-80 w-md-65 w-lg-50 position-absolute z-index-n1">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             viewBox="0 0 589.5 112.7" style="enable-background:new 0 0 589.5 112.7;" xml:space="preserve"
             class="injected-svg js-svg-injector" data-parent="#SVGwave7BottomShape"
