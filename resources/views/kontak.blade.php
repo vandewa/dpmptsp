@@ -7,7 +7,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
-                        {{ Form::model($data, ['route' => ['sosmed.post']]) }}
+                        {{ Form::model($data, ['route' => ['kontak.post']]) }}
                         <!-- /.card-header -->
                         <!-- Input addon -->
                         <div class="card card-info mt-3">
