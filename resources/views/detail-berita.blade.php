@@ -95,8 +95,9 @@
                                 @foreach ($berita_terkait as $terkait)
                                     <li class="course-details__new-courses-list-item">
                                         <div class="course-details__new-courses-list-item-img ">
-                                            <img src="{{ asset($terkait->sampul->preview_image ?? '') }}" alt=""
-                                                style="width:66px;height:66px;" class="img-fluid transition-zoom-hover" />
+                                            <img src="{{ route('helper.show-picture', ['path' => $terkait->sampul->path]) }}"
+                                                alt="" style="width:66px;height:66px;"
+                                                class="img-fluid transition-zoom-hover" />
                                         </div>
                                         <div class="course-details__new-courses-list-item-content">
                                             <h4 class="course-details__new-courses-list-item-content-title"
