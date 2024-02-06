@@ -77,7 +77,7 @@ class BeritaController extends Controller
                 Files::create([
                     'berita_id' => $berita->id,
                     'nama_file' => $file,
-                    'path' => 'public/' . Carbon::now()->isoFormat('Y') . '/' . Carbon::now()->isoFormat('MMMM') . '/' . $file
+                    'path' => 'dpmptsp/public/' . Carbon::now()->isoFormat('Y') . '/' . Carbon::now()->isoFormat('MMMM') . '/' . $file
                 ]);
             }
         }
@@ -120,7 +120,7 @@ class BeritaController extends Controller
                 Files::create([
                     'berita_id' => $id,
                     'nama_file' => $file,
-                    'path' => 'public/' . Carbon::now()->isoFormat('Y') . '/' . Carbon::now()->isoFormat('MMMM') . '/' . $file
+                    'path' => 'dpmptsp/public/' . Carbon::now()->isoFormat('Y') . '/' . Carbon::now()->isoFormat('MMMM') . '/' . $file
                 ]);
             }
         }
