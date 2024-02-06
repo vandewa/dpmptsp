@@ -74,6 +74,7 @@ class BeritaController extends Controller
 
         if ($request->document) {
             foreach ($request->document as $file) {
+                return $file;
                 Files::create([
                     'berita_id' => $berita->id,
                     'nama_file' => $file,

@@ -33,7 +33,7 @@ class FileController extends Controller
     {
         $file = $request->file('file');
         $name = uniqid() . '_' . trim($file->getClientOriginalName());
-        $path = $file->storeAs('dpmptsp/berita/' . Carbon::now()->isoFormat('Y') . '/' . Carbon::now()->isoFormat('MMMM') . '/', $name);
+        $path = $file->storeAs('dpmptsp/public/' . Carbon::now()->isoFormat('Y') . '/' . Carbon::now()->isoFormat('MMMM') . '/', $name);
         return response()->json([
             'name' => $name,
             'original_name' => $file->getClientOriginalName(),
