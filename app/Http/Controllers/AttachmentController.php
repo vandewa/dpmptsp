@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Attachment;
 use Illuminate\Http\Request;
 use Yajra\DataTables\DataTables;
-use App\Models\Attachment;
+use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\AttachmentStoreValidation;
 use App\Http\Requests\AttachmentUpdateValidation;
 
@@ -54,23 +55,33 @@ class AttachmentController extends Controller
      */
     public function store(AttachmentStoreValidation $request)
     {
-        $path = storage_path('app/public/dokumen');
-
-        if (!file_exists($path)) {
-            mkdir($path);
+        if ($request->file('path')) {
+            // $request->file('path')->storeAs(
+            //     'dpmptsp/public/dokumen/' . date('Ymdhis') . '.' . $request->file('path')->extension(),
+            //     'gcs'
+            // );
+            $path = $request->file('path')->storeAs(
+                'dpmptsp/public/dokumen/' . date('Ymdhis') . '.' . $request->file('path')->extension()
+            );
         }
 
-        $file = $request->file('path');
-        $extension = $file->getClientOriginalExtension();
-        $namanya = 'public/dokumen/' . date('Ymdhis') . '.' . $extension;
+        // $path = storage_path('app/public/dokumen');
 
-        if ($request->hasFile('path')) {
-            $file->move($path, $namanya);
-        }
+        // if (!file_exists($path)) {
+        //     mkdir($path);
+        // }
+
+        // $file = $request->file('path');
+        // $extension = $file->getClientOriginalExtension();
+        // $namanya = 'public/dokumen/' . date('Ymdhis') . '.' . $extension;
+
+        // if ($request->hasFile('path')) {
+        //     $file->move($path, $namanya);
+        // }
 
         Attachment::create([
             'nama_file' => $request->nama_file,
-            'path' => $namanya
+            'path' => $path
         ]);
 
         return redirect()->route('attachment.index')->with('store', 'oke');
@@ -125,7 +136,7 @@ class AttachmentController extends Controller
     public function destroy($id)
     {
         $data = Attachment::find($id);
-        unlink((str_replace('public', 'storage', $data->path)));
+        Storage::disk('gcs')->delete($data->path);
         Attachment::destroy($id);
     }
 }

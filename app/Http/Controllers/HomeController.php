@@ -174,7 +174,7 @@ class HomeController extends Controller
                 ->addColumn('action', function ($data) {
                     return
                         '<div class="list-icons">
-                        <a href="' . asset($data->preview_image) . '" class="btn btn-info rounded-round" target="_blank"><i class="far fa-eye mr-2"></i>Detail</a>
+                        <a href="' . route('helper.show-picture', array('path' => $data->link)) . '" class="btn btn-info rounded-round" target="_blank"><i class="far fa-eye mr-2"></i>Detail</a>
                     </div>';
                 })
                 ->rawColumns(['action'])
@@ -197,7 +197,7 @@ class HomeController extends Controller
                 ->addColumn('action', function ($data) {
                     return
                         '<div class="list-icons">
-                        <a href="' . asset($data->preview_image) . '" class="btn btn-info rounded-round" target="_blank"><i class="far fa-eye mr-2"></i>Detail</a>
+                        <a href="' . route('helper.show-picture', array('path' => $data->link)) . '" class="btn btn-info rounded-round" target="_blank"><i class="far fa-eye mr-2"></i>Detail</a>
                     </div>';
                 })
                 ->rawColumns(['action'])
@@ -220,7 +220,7 @@ class HomeController extends Controller
                 ->addColumn('action', function ($data) {
                     return
                         '<div class="list-icons">
-                        <a href="' . asset($data->preview_image) . '" class="btn btn-info rounded-round" target="_blank"><i class="far fa-eye mr-2"></i>Detail</a>
+                        <a href="' . route('helper.show-picture', array('path' => $data->link)) . '" class="btn btn-info rounded-round" target="_blank"><i class="far fa-eye mr-2"></i>Detail</a>
                     </div>';
                 })
                 ->rawColumns(['action'])
@@ -243,7 +243,7 @@ class HomeController extends Controller
                 ->addColumn('action', function ($data) {
                     return
                         '<div class="list-icons">
-                        <a href="' . asset($data->preview_image) . '" class="btn btn-info rounded-round" target="_blank"><i class="far fa-eye mr-2"></i>Detail</a>
+                        <a href="' . route('helper.show-picture', array('path' => $data->link)) . '" class="btn btn-info rounded-round" target="_blank"><i class="far fa-eye mr-2"></i>Detail</a>
                     </div>';
                 })
                 ->rawColumns(['action'])
@@ -266,7 +266,7 @@ class HomeController extends Controller
                 ->addColumn('action', function ($data) {
                     return
                         '<div class="list-icons">
-                        <a href="' . asset($data->preview_image) . '" class="btn btn-info rounded-round" target="_blank"><i class="far fa-eye mr-2"></i>Detail</a>
+                        <a href="' . route('helper.show-picture', array('path' => $data->link)) . '" class="btn btn-info rounded-round" target="_blank"><i class="far fa-eye mr-2"></i>Detail</a>
                     </div>';
                 })
                 ->rawColumns(['action'])
@@ -289,7 +289,7 @@ class HomeController extends Controller
                 ->addColumn('action', function ($data) {
                     return
                         '<div class="list-icons">
-                        <a href="' . asset($data->preview_image) . '" class="btn btn-info rounded-round" target="_blank"><i class="far fa-eye mr-2"></i>Detail</a>
+                        <a href="' . route('helper.show-picture', array('path' => $data->link)) . '" class="btn btn-info rounded-round" target="_blank"><i class="far fa-eye mr-2"></i>Detail</a>
                     </div>';
                 })
                 ->rawColumns(['action'])
@@ -312,7 +312,7 @@ class HomeController extends Controller
                 ->addColumn('action', function ($data) {
                     return
                         '<div class="list-icons">
-                        <a href="' . asset($data->preview_image) . '" class="btn btn-info rounded-round" target="_blank"><i class="far fa-eye mr-2"></i>Detail</a>
+                        <a href="' . route('helper.show-picture', array('path' => $data->link)) . '" class="btn btn-info rounded-round" target="_blank"><i class="far fa-eye mr-2"></i>Detail</a>
                     </div>';
                 })
                 ->rawColumns(['action'])
@@ -336,7 +336,7 @@ class HomeController extends Controller
                 ->addColumn('action', function ($data) {
                     return
                         '<div class="list-icons">
-                        <a href="' . asset($data->preview_image) . '" class="btn btn-info rounded-round" target="_blank"><i class="far fa-eye mr-2"></i>Detail</a>
+                        <a href="' . route('helper.show-picture', array('path' => $data->link)) . '" class="btn btn-info rounded-round" target="_blank"><i class="far fa-eye mr-2"></i>Detail</a>
                     </div>';
                 })
                 ->rawColumns(['action'])
@@ -360,7 +360,7 @@ class HomeController extends Controller
                 ->addColumn('action', function ($data) {
                     return
                         '<div class="list-icons">
-                        <a href="' . asset($data->preview_image) . '" class="btn btn-info rounded-round" target="_blank"><i class="far fa-eye mr-2"></i>Detail</a>
+                        <a href="' . route('helper.show-picture', array('path' => $data->link)) . '" class="btn btn-info rounded-round" target="_blank"><i class="far fa-eye mr-2"></i>Detail</a>
                     </div>';
                 })
                 ->rawColumns(['action'])
@@ -384,7 +384,7 @@ class HomeController extends Controller
                 ->addColumn('action', function ($data) {
                     return
                         '<div class="list-icons">
-                        <a href="' . asset($data->preview_image) . '" class="btn btn-info rounded-round" target="_blank"><i class="far fa-eye mr-2"></i>Detail</a>
+                        <a href="' . route('helper.show-picture', array('path' => $data->link)) . '" class="btn btn-info rounded-round" target="_blank"><i class="far fa-eye mr-2"></i>Detail</a>
                     </div>';
                 })
                 ->rawColumns(['action'])
@@ -408,7 +408,7 @@ class HomeController extends Controller
                 ->addColumn('action', function ($data) {
                     return
                         '<div class="list-icons">
-                        <a href="' . asset($data->preview_image) . '" class="btn btn-info rounded-round" target="_blank"><i class="far fa-eye mr-2"></i>Detail</a>
+                        <a href="' . route('helper.show-picture', array('path' => $data->link)) . '" class="btn btn-info rounded-round" target="_blank"><i class="far fa-eye mr-2"></i>Detail</a>
                     </div>';
                 })
                 ->rawColumns(['action'])
@@ -432,7 +432,7 @@ class HomeController extends Controller
                 ->addColumn('action', function ($data) {
                     return
                         '<div class="list-icons">
-                        <a href="' . asset($data->preview_image) . '" class="btn btn-info rounded-round" target="_blank"><i class="far fa-eye mr-2"></i>Detail</a>
+                        <a href="' . route('helper.show-picture', array('path' => $data->link)) . '" class="btn btn-info rounded-round" target="_blank"><i class="far fa-eye mr-2"></i>Detail</a>
                     </div>';
                 })
                 ->rawColumns(['action'])
@@ -456,7 +456,7 @@ class HomeController extends Controller
                 ->addColumn('action', function ($data) {
                     return
                         '<div class="list-icons">
-                        <a href="' . asset($data->preview_image) . '" class="btn btn-info rounded-round" target="_blank"><i class="far fa-eye mr-2"></i>Detail</a>
+                        <a href="' . route('helper.show-picture', array('path' => $data->link)) . '" class="btn btn-info rounded-round" target="_blank"><i class="far fa-eye mr-2"></i>Detail</a>
                     </div>';
                 })
                 ->rawColumns(['action'])
@@ -482,7 +482,7 @@ class HomeController extends Controller
                 ->addColumn('action', function ($data) {
                     return
                         '<div class="list-icons">
-                        <a href="' . asset($data->preview_image) . '" class="btn btn-info rounded-round" target="_blank">Detail</a>
+                        <a href="' . route('helper.show-picture', array('path' => $data->link)) . '" class="btn btn-info rounded-round" target="_blank">Detail</a>
                     </div>';
                 })
                 ->rawColumns(['action'])

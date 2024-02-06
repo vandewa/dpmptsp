@@ -138,7 +138,8 @@
                         <a href="{{ route('detail.berita', $item->slug) }}">
                             <article class="card h-100">
                                 <div class="card-img-top position-relative">
-                                    <img class="card-img-top" src="{{ asset($item->sampul->preview_image ?? '') }}"
+                                    <img class="card-img-top"
+                                        src="{{ route('helper.show-picture', ['path' => $item->sampul->path]) }}"
                                         style="object-fit:cover; max-height:250px;">
                                     <figure class="ie-curved-y position-absolute right-0 bottom-0 left-0 mb-n1">
                                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1920 100.1">

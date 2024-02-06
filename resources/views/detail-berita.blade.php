@@ -15,7 +15,7 @@
                         <div class="swiper-wrapper">
                             @foreach ($data->foto as $list)
                                 <div class="swiper-slide">
-                                    <img src="{{ asset($list->preview_image ?? '') }}" alt="image"
+                                    <img src="{{ route('helper.show-picture', ['path' => $list->path]) }}" alt="image"
                                         style="width: 100%; border-top-left-radius: 25px; border-top-right-radius: 25px;" />
                                 </div>
                             @endforeach

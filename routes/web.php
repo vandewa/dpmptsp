@@ -1,31 +1,32 @@
 <?php
 
-use App\Http\Controllers\AttachmentController;
-use App\Http\Controllers\FaqController;
-use App\Http\Controllers\TransparansiAnggaran\LhkasnController;
-use App\Http\Controllers\TransparansiAnggaran\RenjaController;
-use App\Http\Controllers\TransparansiAnggaran\RenstraController;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FaqController;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\BeritaController;
-use App\Http\Controllers\DaftarInformasiPublikController;
+use App\Http\Controllers\HelperController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\AttachmentController;
 use App\Http\Controllers\LinkTerkaitController;
 use App\Http\Controllers\InformasiUmumController;
 use App\Http\Controllers\PelayananPerizinanController;
-use App\Http\Controllers\TransparansiAnggaran\CalkController;
+use App\Http\Controllers\DaftarInformasiPublikController;
 use App\Http\Controllers\TransparansiAnggaran\DpaController;
-use App\Http\Controllers\TransparansiAnggaran\LaporanAsetController;
-use App\Http\Controllers\TransparansiAnggaran\LkjipController;
-use App\Http\Controllers\TransparansiAnggaran\NeracaController;
-use App\Http\Controllers\TransparansiAnggaran\PerjanjianKinerjaController;
-use App\Http\Controllers\TransparansiAnggaran\PoblController;
-use App\Http\Controllers\TransparansiAnggaran\ProgramKegiatanController;
-use App\Http\Controllers\TransparansiAnggaran\RealisasiAnggaranController;
 use App\Http\Controllers\TransparansiAnggaran\RkaController;
+use App\Http\Controllers\TransparansiAnggaran\CalkController;
+use App\Http\Controllers\TransparansiAnggaran\PoblController;
+use App\Http\Controllers\TransparansiAnggaran\LkjipController;
+use App\Http\Controllers\TransparansiAnggaran\RenjaController;
+use App\Http\Controllers\TransparansiAnggaran\LhkasnController;
+use App\Http\Controllers\TransparansiAnggaran\NeracaController;
+use App\Http\Controllers\TransparansiAnggaran\RenstraController;
+use App\Http\Controllers\TransparansiAnggaran\LaporanAsetController;
+use App\Http\Controllers\TransparansiAnggaran\ProgramKegiatanController;
+use App\Http\Controllers\TransparansiAnggaran\PerjanjianKinerjaController;
+use App\Http\Controllers\TransparansiAnggaran\RealisasiAnggaranController;
 
 /*
 |--------------------------------------------------------------------------
@@ -64,6 +65,8 @@ Route::get('/page/daftar-informasi-publik1', [HomeController::class, 'getDIP'])-
 Route::get('/page/daftar-informasi-publik2', [HomeController::class, 'getDIP2'])->name('dip2.list');
 Route::get('/page/daftar-informasi-publik3', [HomeController::class, 'cariTahun'])->name('cari.tahun.dip2');
 Route::get('/page/{id}', [HomeController::class, 'halaman'])->name('halaman');
+Route::get('show-picture', [HelperController::class, 'showPicture'])->name('helper.show-picture');
+
 
 
 //dokumentasi template
