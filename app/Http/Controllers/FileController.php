@@ -33,7 +33,7 @@ class FileController extends Controller
     {
         $file = $request->file('file');
         $name = uniqid() . '_' . trim($file->getClientOriginalName());
-        $path = $file->storeAs('dpmptsp/public/' . Carbon::now()->isoFormat('Y') . '/' . Carbon::now()->isoFormat('MMMM') . '/', $name);
+        $path = $file->storeAs('dpmptsp/berita/', $name);
         return response()->json([
             'name' => $name,
             'original_name' => $file->getClientOriginalName(),
@@ -79,15 +79,17 @@ class FileController extends Controller
      */
     public function destroy($id)
     {
-        $data = File::where('nama_file', $id)->first();
-
         // Delete the file
-        Storage::disk('gcs')->delete($data->path);
+        Storage::disk('gcs')->delete($id);
 
-        if ($data) {
-            $data->delete();
-        }
+        return response()->json([
+            'response' => 'File terhapus'
+        ]);
+    }
 
+    public function hapus($id)
+    {
+        Storage::disk('gcs')->delete('dpmptsp/berita/' . $id);
         return response()->json([
             'response' => 'File terhapus'
         ]);

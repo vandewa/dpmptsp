@@ -60,7 +60,7 @@ return [
 
         'gcs' => [
             'driver' => 'gcs',
-            // 'url' => 'https://storage.googleapis.com/web_opd',
+            'url' => 'https://storage.googleapis.com/web_opd',
             'key_file' => [
                 "type" => "service_account",
                 "project_id" => "diskominfo-wonosobo",

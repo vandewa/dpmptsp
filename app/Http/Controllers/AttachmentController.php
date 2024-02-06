@@ -56,28 +56,10 @@ class AttachmentController extends Controller
     public function store(AttachmentStoreValidation $request)
     {
         if ($request->file('path')) {
-            // $request->file('path')->storeAs(
-            //     'dpmptsp/public/dokumen/' . date('Ymdhis') . '.' . $request->file('path')->extension(),
-            //     'gcs'
-            // );
             $path = $request->file('path')->storeAs(
-                'dpmptsp/public/dokumen/' . date('Ymdhis') . '.' . $request->file('path')->extension()
+                'dpmptsp/dokumen/' . date('Ymdhis') . '.' . $request->file('path')->extension()
             );
         }
-
-        // $path = storage_path('app/public/dokumen');
-
-        // if (!file_exists($path)) {
-        //     mkdir($path);
-        // }
-
-        // $file = $request->file('path');
-        // $extension = $file->getClientOriginalExtension();
-        // $namanya = 'public/dokumen/' . date('Ymdhis') . '.' . $extension;
-
-        // if ($request->hasFile('path')) {
-        //     $file->move($path, $namanya);
-        // }
 
         Attachment::create([
             'nama_file' => $request->nama_file,

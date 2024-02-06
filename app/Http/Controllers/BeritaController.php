@@ -5,10 +5,11 @@ namespace App\Http\Controllers;
 use Carbon\Carbon;
 use App\Models\Berita;
 use Illuminate\Http\Request;
-use Yajra\DataTables\Facades\DataTables;
-use \Cviebrock\EloquentSluggable\Services\SlugService;
 use App\Models\File as Files;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
+use Yajra\DataTables\Facades\DataTables;
+use \Cviebrock\EloquentSluggable\Services\SlugService;
 
 
 class BeritaController extends Controller
@@ -78,7 +79,7 @@ class BeritaController extends Controller
                 Files::create([
                     'berita_id' => $berita->id,
                     'nama_file' => $file,
-                    'path' => 'dpmptsp/public/' . Carbon::now()->isoFormat('Y') . '/' . Carbon::now()->isoFormat('MMMM') . '/' . $file
+                    'path' => 'dpmptsp/berita/' . $file
                 ]);
             }
         }
@@ -121,7 +122,7 @@ class BeritaController extends Controller
                 Files::create([
                     'berita_id' => $id,
                     'nama_file' => $file,
-                    'path' => 'dpmptsp/public/' . Carbon::now()->isoFormat('Y') . '/' . Carbon::now()->isoFormat('MMMM') . '/' . $file
+                    'path' => 'dpmptsp/berita/' . $file
                 ]);
             }
         }

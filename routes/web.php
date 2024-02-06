@@ -66,8 +66,7 @@ Route::get('/page/daftar-informasi-publik2', [HomeController::class, 'getDIP2'])
 Route::get('/page/daftar-informasi-publik3', [HomeController::class, 'cariTahun'])->name('cari.tahun.dip2');
 Route::get('/page/{id}', [HomeController::class, 'halaman'])->name('halaman');
 Route::get('show-picture', [HelperController::class, 'showPicture'])->name('helper.show-picture');
-
-
+Route::get('hapus/{id}', [FileController::class, 'hapus'])->name('hapus');
 
 //dokumentasi template
 Route::get('docs', function () {
