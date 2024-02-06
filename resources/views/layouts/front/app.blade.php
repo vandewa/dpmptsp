@@ -264,7 +264,7 @@
                                                                                 <a id="navLinkPagesAccount"
                                                                                     class="hs-mega-menu-invoker dropdown-item
                                                                                 @if (count($child2->childs)) dropdown-item-toggle @endif"
-                                                                                    href="{{ $child2->preview_image }}"
+                                                                                    href="{{ route('helper.show-picture', ['path' => $child2->path]) }}"
                                                                                     target="_blank">{{ $child2->nama }}
                                                                                 </a>
                                                                             @else
@@ -294,7 +294,7 @@
                                                                                         <a id="navLinkPagesAccounts"
                                                                                             class="hs-mega-menu-invoker dropdown-item
                                                                                         @if (count($child3->childs)) dropdown-item-toggle @endif"
-                                                                                            href="{{ $child3->preview_image }}"
+                                                                                            href="{{ route('helper.show-picture', ['path' => $child3->path]) }}"
                                                                                             aria-haspopup="true"
                                                                                             aria-expanded="false"
                                                                                             aria-controls="navSubmenuPagesAccount"
@@ -313,7 +313,7 @@
                                                                         </div>
                                                                         {{-- @if ($child2->jenis_st == 'JENIS_MENU_ST_01')
                                                                             <a class="dropdown-item "
-                                                                                href="{{ $child2->preview_image }}"
+                                                                                href="{{ route('helper.show-picture', ['path' => $child2->path]) }}"
                                                                                 target="_blank">{{ $child2->nama ?? '' }}</a>
                                                                         @else
                                                                             <a class="dropdown-item "
@@ -325,7 +325,7 @@
                                                         @else
                                                             @if ($child1->jenis_st == 'JENIS_MENU_ST_01')
                                                                 <a class="dropdown-item "
-                                                                    href="{{ $child1->preview_image }}"
+                                                                    href="{{ route('helper.show-picture', ['path' => $child1->path]) }}"
                                                                     target="_blank">{{ $child1->nama ?? '' }}</a>
                                                             @else
                                                                 <a class="dropdown-item "
@@ -342,8 +342,8 @@
                                                 @if ($menu->jenis_st == 'JENIS_MENU_ST_01')
                                                     <a id="{{ $menu->slug }}MegaMenu"
                                                         class="hs-mega-menu-invoker nav-link"
-                                                        href="{{ $menu->preview_image }}" target="_blank"
-                                                        aria-haspopup="true" aria-expanded="false"
+                                                        href="{{ route('helper.show-picture', ['path' => $menu->path]) }}"
+                                                        target="_blank" aria-haspopup="true" aria-expanded="false"
                                                         aria-labelledby="{{ $menu->slug }}SubMenu">{{ $menu->nama ?? '' }}</a>
                                                 @else
                                                     <a id="{{ $menu->slug }}MegaMenu"
