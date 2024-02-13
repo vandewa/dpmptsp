@@ -18,9 +18,12 @@ class TambahVisitor implements ShouldQueue
     /**
      * Create a new job instance.
      */
-    public function __construct()
+
+    public $kampret;
+
+    public function __construct($a)
     {
-        //
+        $this->kampret = $a;
     }
 
     /**
@@ -28,7 +31,8 @@ class TambahVisitor implements ShouldQueue
      */
     public function handle(): void
     {
-        $geoipInfo = geoip()->getLocation($_SERVER['REMOTE_ADDR']);
+        $geoipInfo = geoip()->getLocation($this->kampret);
+        
         if (Browser::isDesktop() == 1) {
             $jenis = 'Desktop';
         }

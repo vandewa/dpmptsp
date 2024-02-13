@@ -25,7 +25,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        TambahVisitor::dispatch();
+        TambahVisitor::dispatch($_SERVER['REMOTE_ADDR']);
         // $this->pengunjung();
         $berita = Berita::with(['sampul', 'dibuat'])
             ->where('publish_st', 1)
