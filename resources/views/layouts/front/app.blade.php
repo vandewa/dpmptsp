@@ -20,18 +20,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
     <!-- CSS Implementing Plugins -->
-    <link rel="stylesheet" href="{{ asset('front/assets/vendor/fontawesome/css/all.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('front/assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('front/assets/vendor/aos/dist/aos.css') }}">
+    <link rel="stylesheet" href="{{ asset('front/assets/vendor/fontawesome/css/all.min.css') }}" async>
+    <link rel="stylesheet" href="{{ asset('front/assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.css') }}" async>
+    <link rel="stylesheet" href="{{ asset('front/assets/vendor/aos/dist/aos.css') }}" async>
 
     <!-- CSS Front Template -->
-    <link rel="stylesheet" href="{{ asset('front/assets/css/theme.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('front/assets/style.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/hover-master/css/hover.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/entox.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/entox-responsive.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/zilom.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/zilom-responsive.css') }}">
+    <link rel="stylesheet" href="{{ asset('front/assets/css/theme.min.css') }}" async>
+    <link rel="stylesheet" href="{{ asset('front/assets/style.css') }}" async>
+    <link rel="stylesheet" href="{{ asset('css/hover-master/css/hover.css') }}" async>
+    <link rel="stylesheet" href="{{ asset('css/entox.css') }}" async>
+    <link rel="stylesheet" href="{{ asset('css/entox-responsive.css') }}" async>
+    <link rel="stylesheet" href="{{ asset('css/zilom.css') }}" async>
+    <link rel="stylesheet" href="{{ asset('css/zilom-responsive.css') }}" async>
     <script src="https://kit.fontawesome.com/bb9305debb.js" crossorigin="anonymous"></script>
     @vite([])
 
