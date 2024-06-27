@@ -274,9 +274,54 @@
         </div>
         <!-- End Card -->
         </div>
-        </div>
-        </div>
         <!-- End Clients Section -->
 
+
+
+        <div class="container space-bottom-0 space-bottom-lg-0">
+            <div class="col-md-12 space-top-3 space-bottom-0">
+                <div class="d-flex justify-content-center">
+                    <div class="mt-2 col-lg-4 pt-7 pt-lg-0">
+                        <!-- Card -->
+                        @if (is_mobile())
+                            <div class="p-4 card shadow-primary-lg p-lg-5 mb-7" data-aos="fade-up"
+                                style="margin-top: 0rem;!important;background: rgb(217,176,40);
+                            background:black;">
+                            @else
+                                <div class="p-4 card shadow-primary-lg p-lg-5 mb-7" data-aos="fade-up"
+                                    style="margin-top: -10rem;!important;background: rgb(217,176,40);
+                                    background:black;">
+                        @endif
+                        <div class="text-center text-white">
+                            <div class="mt-5" style="margin-bottom: 3rem;">
+                                <img src="{{ asset('mpp.png') }}" width="150" height="60">
+                            </div>
+                            <div class="space-y-2 mb-3">
+                                <span><b>MPP</b></span> <br>
+                                <span style="font-size: 14px;">Website Mal Pelayanan Publik Wonosobo</span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center gap-3">
+                            <!-- Item #1 -->
+                            <div class="mr-2 mb-3">
+                                <a href="https://websitempp.wonosobokab.go.id/"
+                                    class="p-1 text-white hvr-underline-from-left" target="blank">
+                                    <span class="text-center">
+                                        <center><i class="fa-solid fa-house fa-xl"></i></center>
+                                        <span style="font-size:11px;">
+                                            Beranda
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class=" transition-3d-hover" href="#"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
+
+
+
 @endsection
