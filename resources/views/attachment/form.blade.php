@@ -22,5 +22,5 @@
 </div>
 
 @push('js')
-    {!! JsValidator::formRequest('App\Http\Requests\LinkTerkaitValidation') !!}
+    {!! JsValidator::formRequest('App\Http\Requests\AttachmentStoreValidation') !!}
 @endpush

@@ -25,7 +25,7 @@ class AttachmentStoreValidation extends FormRequest
     {
         return [
             'nama_file' => 'required',
-            'path' => 'required|max:2048',
+            'path' => 'required|max:15048',
         ];
     }
 }
