@@ -6,24 +6,24 @@
 @section('content')
     <main id="content" role="main">
         <!-- Hero Section -->
-        <div class="bg-img-hero"
-            style="background-image: url({{ asset('front/assets/svg/components/abstract-shapes-12.svg') }});">
+        <div class="bg-img-hero" style="background: linear-gradient(to bottom, #F1F5FD, #A4BDD8);">
             <div class="container space-top-3 space-top-lg-4 space-bottom-2 position-relative z-index-2">
                 <div class="w-md-100 w-lg-100 text-center mx-md-auto">
                     <h1 style="font-family: 'Open Sans', sans-serif; font-weight: bold;">MANTAP</h1>
                     <h1 style="font-family: 'Open Sans', sans-serif; font-weight: bold;">( Maju, Amanah, Tertib, Profesional
                         )</h1>
                     <p>DPMPTSP Kabupaten Wonosobo</p>
-
                 </div>
             </div>
         </div>
 
+
+
         <!-- End Hero Section -->
         <div class="container space-top-1 space-top-lg-1 space-bottom-2">
             <!-- FAQ Topics Section -->
-            {{-- <div class="container space-2 space-bottom-lg-1">
-                <div class="d-flex justify-content-center ">
+            <div class="container space-2 space-bottom-lg-1">
+                {{-- <div class="d-flex justify-content-center ">
                     <img src="{{ asset('pelayanan.gif') }}" style="height: 150px;">
                 </div>
                 <div class="d-flex justify-content-center space-bottom-lg-1">
@@ -49,18 +49,35 @@
                         </div>
                     </div>
 
+                </div> --}}
+
+                <div class="row justify-content-lg-center">
+                    <div class="col-lg-12">
+                        <div id="basics" class="space-bottom-1">
+                            <div class="d-flex justify-content-center">
+                                <div class="news-title-container">
+                                    <h2 class="news-title">
+                                        FAQ
+                                    </h2>
+                                    <div class="d-flex justify-content-center">
+                                        <img src="{{ asset('katen/images/wave.svg') }}" class="wave" alt="wave" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
 
                 <div class="row justify-content-lg-center">
                     <div class="col-lg-8">
                         <div id="basics" class="space-bottom-1">
-                            <div class="d-flex justify-content-center ">
+                            {{-- <div class="d-flex justify-content-center ">
                                 <img src="{{ asset('FAQ.gif') }}" style="height: 90px;">
                             </div>
                             <div class="d-flex justify-content-center space-bottom-lg-1">
                                 <img src="{{ asset('katen/images/wave.svg') }}" class="wave" alt="wave" />
-                            </div>
+                            </div> --}}
 
                             <!-- Basics Accordion -->
                             <div id="basicsAccordion">
@@ -95,17 +112,22 @@
                         </div>
                     </div>
                 </div>
-            </div> --}}
+            </div>
 
 
             <div class="space-bottom-1 mt-5">
                 <div class="d-flex justify-content-center">
-                    <img src="{{ asset('berita.gif') }}" style="height: 90px;">
-                    {{-- <br> --}}
+                    <div class="news-title-container">
+                        <h2 class="news-title">
+                            {{-- <img src="{{ asset('berita.gif') }}" style="height: 90px;">     --}}
+                            Berita Terkini
+                        </h2>
+                        <div class="d-flex justify-content-center">
+                            <img src="{{ asset('katen/images/wave.svg') }}" class="wave" alt="wave" />
+                        </div>
+                    </div>
                 </div>
-                <div class="d-flex justify-content-center">
-                    <img src="{{ asset('katen/images/wave.svg') }}" class="wave" alt="wave" />
-                </div>
+
             </div>
 
             <div class="col-md-12">
@@ -218,6 +240,26 @@
         .small-font {
             font-size: 1.2rem;
             /* Mengatur ukuran font menjadi lebih kecil, misalnya 14px */
+        }
+
+        .news-title-container {
+            display: block;
+            width: 100%;
+            /* Lebar penuh wadah */
+            background-color: rgba(135, 206, 250, 0.2);
+            /* Warna biru muda dengan transparansi */
+            padding: 10px 0;
+            /* Padding atas dan bawah */
+            text-align: center;
+            /* Teks rata tengah */
+        }
+
+        .news-title {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: bold;
+            color: #000;
+            /* Warna teks hitam */
+            margin: 0;
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">

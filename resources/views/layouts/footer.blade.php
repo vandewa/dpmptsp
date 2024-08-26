@@ -1,11 +1,32 @@
-<div class="col-md-12 space-top-2 space-bottom-0">
+{{-- <div class="col-md-12 space-top-2 space-bottom-0">
     <div class="d-flex justify-content-center">
         <img src="{{ asset('kontak.gif') }}" style="height: 50px;">
     </div>
     <div class="d-flex justify-content-center">
         <img src="{{ asset('katen/images/wave.svg') }}" class="wave" alt="wave" />
     </div>
+</div> --}}
+
+<div class="container space-2 space-bottom-lg-1">
+    <div class="row justify-content-lg-center">
+        <div class="col-lg-12">
+            <div id="basics" class="space-bottom-1">
+                <div class="d-flex justify-content-center">
+                    <div class="news-title-container">
+                        <h2 class="news-title">
+                            Kontak Kami
+                        </h2>
+                        <div class="d-flex justify-content-center">
+                            <img src="{{ asset('katen/images/wave.svg') }}" class="wave" alt="wave" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+
 <footer class="position-relative">
     <!-- Lists -->
     <div class="container space-top-0 space-top-md-0 space-bottom-2">
@@ -147,7 +168,7 @@
     <!-- End Social Networks -->
 
     <!-- SVG Shape -->
-    <figure class="bottom-0 left-0 ie-wave-7-bottom w-80 w-md-65 w-lg-50 position-absolute z-index-n1">
+    {{-- <figure class="bottom-0 left-0 ie-wave-7-bottom w-80 w-md-65 w-lg-50 position-absolute z-index-n1">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             viewBox="0 0 589.5 112.7" style="enable-background:new 0 0 589.5 112.7;" xml:space="preserve"
             class="injected-svg js-svg-injector" data-parent="#SVGwave7BottomShape"
@@ -159,7 +180,6 @@
             </style>
             <linearGradient id="wave7BottomID" gradientUnits="userSpaceOnUse" x1="275.6292" y1="4.2812"
                 x2="303.6378" y2="163.1255">
-                {{-- <stop class="stop-color-danger" offset="0" style="stop-color:#a82020"></stop> --}}
                 <stop class="stop-color-success" offset="1" style="stop-color:#1d8427"></stop>
             </linearGradient>
             <path fill="url(#wave7BottomID)" d="M0,64.7c0,0,131.5-62.5,277-23.5s205,66,312.5,71.5H0L0,64.7z">
@@ -181,7 +201,6 @@
             </style>
             <linearGradient id="wave7BottomID" gradientUnits="userSpaceOnUse" x1="275.6292" y1="4.2812"
                 x2="303.6378" y2="163.1255">
-                {{-- <stop class="stop-color-danger" offset="0" style="stop-color:#a82020"></stop> --}}
                 <stop class="stop-color-success" offset="1" style="stop-color:#1d8427"></stop>
             </linearGradient>
             <path fill="url(#wave7BottomID)" d="M0,64.7c0,0,131.5-62.5,277-23.5s205,66,312.5,71.5H0L0,64.7z">
@@ -190,6 +209,10 @@
                 d="M0,0c0,0.1,38.9,5.7,42.5,6.4c37.7,7.3,74.4,19.5,108.4,37.3c15.5,8.2,30.3,17.6,45.6,26.3  c22.2,12.7,45.4,22.1,70.1,28.9c11,3,22.2,5.5,33.4,7.7c13.6,2.6,27.3,4.7,41,6.2c0,0-341,0-341,0S0,0.2,0,0z">
             </path>
         </svg>
-    </figure>
+    </figure> --}}
     <!-- End SVG Shape -->
+</footer>
+
+<footer class="footer-custom">
+    <!-- Isi Footer, bisa ditambahkan teks atau tautan -->
 </footer>

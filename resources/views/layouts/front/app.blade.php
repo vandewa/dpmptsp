@@ -164,6 +164,18 @@
         .sosmed ul li:hover:nth-child(4) a:after {
             background: #2E2E2E;
         }
+
+
+        .footer-custom {
+            background-color: #708DC7;
+            /* Warna biru seperti di gambar */
+            height: 50px;
+            /* Ketinggian bisa disesuaikan sesuai kebutuhan */
+            width: 100%;
+            /* Lebar penuh */
+            position: relative;
+            bottom: 0;
+        }
     </style>
 
 
