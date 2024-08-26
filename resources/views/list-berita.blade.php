@@ -153,7 +153,7 @@
                                 </div>
 
                                 <div class="card-body">
-                                    <h3><a class="text-inherit"
+                                    <h3 class="small-font"><a class="text-inherit"
                                             href="{{ route('detail.berita', $item->slug) }}">{{ $item->judul ?? '' }}</a>
                                     </h3>
                                 </div>
@@ -180,47 +180,6 @@
                     </div>
                 @endforeach
             </div>
-
-            <style>
-                .square-img-container {
-                    position: relative;
-                    width: 100%;
-                    padding-bottom: 100%;
-                    /* Membuat wadah berbentuk persegi dengan rasio 1:1 */
-                    overflow: hidden;
-                }
-
-                .square-img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    /* Menjaga aspek rasio gambar */
-                    object-position: center;
-                    /* Memposisikan gambar di tengah (center-center) */
-                }
-            </style>
-
-
-            <style>
-                .square-img-container {
-                    position: relative;
-                    width: 100%;
-                    padding-bottom: 100%;
-                    /* Membuat wadah berbentuk persegi dengan rasio 1:1 */
-                    overflow: hidden;
-                }
-
-                .square-img {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    /* Membuat gambar menyesuaikan ukuran wadah dengan tetap menjaga aspek rasio */
-                }
-            </style>
-
         </div>
 
         <div class="container mt-3 mb-2 text-right">
@@ -247,12 +206,18 @@
         }
 
         .square-img {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
             object-fit: cover;
-            /* Menjaga aspek rasio gambar */
-            object-position: center;
-            /* Memposisikan gambar di tengah (center-center) */
+            /* Membuat gambar menyesuaikan ukuran wadah dengan tetap menjaga aspek rasio */
+        }
+
+        .small-font {
+            font-size: 1.2rem;
+            /* Mengatur ukuran font menjadi lebih kecil, misalnya 14px */
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
