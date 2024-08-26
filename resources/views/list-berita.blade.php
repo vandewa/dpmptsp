@@ -9,16 +9,20 @@
         <div class="bg-img-hero"
             style="background-image: url({{ asset('front/assets/svg/components/abstract-shapes-12.svg') }});">
             <div class="container space-top-3 space-top-lg-4 space-bottom-2 position-relative z-index-2">
-                <div class="w-md-80 w-lg-60 text-center mx-md-auto">
-                    <h1>KEPUASAN ANDA PRIORITAS KAMI</h1>
+                <div class="w-md-100 w-lg-100 text-center mx-md-auto">
+                    <h1 style="font-family: 'Open Sans', sans-serif; font-weight: bold;">MANTAP</h1>
+                    <h1 style="font-family: 'Open Sans', sans-serif; font-weight: bold;">( Maju, Amanah, Tertib, Profesional
+                        )</h1>
                     <p>DPMPTSP Kabupaten Wonosobo</p>
+
                 </div>
             </div>
         </div>
+
         <!-- End Hero Section -->
         <div class="container space-top-1 space-top-lg-1 space-bottom-2">
             <!-- FAQ Topics Section -->
-            <div class="container space-2 space-bottom-lg-1">
+            {{-- <div class="container space-2 space-bottom-lg-1">
                 <div class="d-flex justify-content-center ">
                     <img src="{{ asset('pelayanan.gif') }}" style="height: 150px;">
                 </div>
@@ -91,10 +95,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
 
-            <div class="space-bottom-1">
+            <div class="space-bottom-1 mt-5">
                 <div class="d-flex justify-content-center">
                     <img src="{{ asset('berita.gif') }}" style="height: 90px;">
                     {{-- <br> --}}
@@ -137,10 +141,10 @@
                         <!-- Blog Card -->
                         <a href="{{ route('detail.berita', $item->slug) }}">
                             <article class="card h-100">
-                                <div class="card-img-top position-relative">
-                                    <img class="card-img-top"
+                                <div class="card-img-top position-relative square-img-container">
+                                    <img class="card-img-top square-img"
                                         src="{{ route('helper.show-picture', ['path' => $item->sampul->path]) }}"
-                                        style="object-fit:cover; max-height:250px;">
+                                        alt="{{ $item->judul ?? '' }}">
                                     <figure class="ie-curved-y position-absolute right-0 bottom-0 left-0 mb-n1">
                                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1920 100.1">
                                             <path fill="#fff" d="M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z"></path>
@@ -157,8 +161,8 @@
                                 <div class="card-footer border-0 pt-0">
                                     <div class="media align-items-center">
                                         <div class="avatar-group">
-                                            <a class="avatar avatar-xs avatar-circle" href="#"
-                                                data-toggle="tooltip" data-placement="top" title=""
+                                            <a class="avatar avatar-xs avatar-circle" href="#" data-toggle="tooltip"
+                                                data-placement="top" title=""
                                                 data-original-title=" {{ $item->dibuat->name ?? '' }}">
                                                 <img class="avatar-img"
                                                     src="{{ asset('favicon_io/apple-touch-icon.png') }}"
@@ -176,6 +180,47 @@
                     </div>
                 @endforeach
             </div>
+
+            <style>
+                .square-img-container {
+                    position: relative;
+                    width: 100%;
+                    padding-bottom: 100%;
+                    /* Membuat wadah berbentuk persegi dengan rasio 1:1 */
+                    overflow: hidden;
+                }
+
+                .square-img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    /* Menjaga aspek rasio gambar */
+                    object-position: center;
+                    /* Memposisikan gambar di tengah (center-center) */
+                }
+            </style>
+
+
+            <style>
+                .square-img-container {
+                    position: relative;
+                    width: 100%;
+                    padding-bottom: 100%;
+                    /* Membuat wadah berbentuk persegi dengan rasio 1:1 */
+                    overflow: hidden;
+                }
+
+                .square-img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    /* Membuat gambar menyesuaikan ukuran wadah dengan tetap menjaga aspek rasio */
+                }
+            </style>
+
         </div>
 
         <div class="container mt-3 mb-2 text-right">
@@ -192,5 +237,23 @@
             font-size: 16px;
             line-height: 24px;
         }
+
+        .square-img-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 100%;
+            /* Membuat wadah berbentuk persegi dengan rasio 1:1 */
+            overflow: hidden;
+        }
+
+        .square-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Menjaga aspek rasio gambar */
+            object-position: center;
+            /* Memposisikan gambar di tengah (center-center) */
+        }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
 @endpush
